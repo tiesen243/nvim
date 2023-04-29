@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
   use 'dracula/vim'
   use 'tribela/vim-transparent'
 
--- Dashboard
+  -- Dashboard
   use {
     'goolord/alpha-nvim',
     config = function ()
@@ -27,22 +27,29 @@ return require('packer').startup(function(use)
        require'alpha'.setup(require'alpha.themes.dashboard'.config)
      end
    }
+	 use 'folke/which-key.nvim'
 
-  -- Language
+  -- Syntax Highlighting
   use 'nvim-treesitter/nvim-treesitter'
+
   -- Copilot
   use 'github/copilot.vim'
-  use 'zbirenbaum/copilot.lua'
-  use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-  }
+
   -- Language Server Protocol
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+
+	-- Cmp Plugin
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-vsnip'
+	use 'onsails/lspkind.nvim'
 
   -- GUI
   use 'nvim-tree/nvim-tree.lua'
@@ -56,6 +63,12 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'nvim-telescope/telescope-media-files.nvim'
+
+	-- Formatter
+	use 'jose-elias-alvarez/null-ls.nvim'
+
+	-- Auto Pairs
+	use 'windwp/nvim-autopairs'
 
   if packer_bootstrap then
     require('packer').sync()

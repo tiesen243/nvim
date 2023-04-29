@@ -85,22 +85,35 @@ _G.packer_plugins = {
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  ["copilot-cmp"] = {
-    load_after = {},
+  ["cmp-buffer"] = {
     loaded = true,
-    needs_bufread = false,
-    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\copilot-cmp",
-    url = "https://github.com/zbirenbaum/copilot-cmp"
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["copilot.lua"] = {
+  ["cmp-cmdline"] = {
     loaded = true,
-    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["copilot.vim"] = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -116,6 +129,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -166,6 +194,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-transparent",
     url = "https://github.com/tribela/vim-transparent"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
@@ -174,11 +212,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n›\1\0\0\5\0\6\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\5\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\27alpha.themes.dashboard\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd copilot.lua ]]
-vim.cmd [[ packadd copilot-cmp ]]
-time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

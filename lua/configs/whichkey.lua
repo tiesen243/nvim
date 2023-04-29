@@ -14,10 +14,10 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
+		i = { ":!Git init<cr>", "Init" },
 		a = { ":!Git add .<cr>", "Add File" },
 		c = { ":!Git commit -m ''<cr>", "Commit" },
 		p = { ":!Git push<cr>", "Push" },
-		i = { ":!Git init<cr>", "Init" },
 		P = { ":!Git pull<cr>", "Pull" },
 	}
 }

@@ -1,22 +1,20 @@
 local wk = require("which-key")
 
 local mappings = {
-	q = { ":q<cr>", "Quit" },
-	Q = { ":wq<cr>", "Save and Quit" },
-	e = { ":NvimTreeToggle<cr>", "Explorer" },
-	f = { ":Telescope find_files<cr>", "Find Files" },
-	c = {":e ~/AppData/Local/nvim/init.lua<cr>", "Configuartion"},
-	b = {
-		name = "Buffers",
-		x = { ":bnext<cr>", "Next Buffer" },
-		z = { ":bprevious<cr>", "Previous Buffer" },
-		d = { "<cmd>bd<cr>", "Delete Buffer" },
+	q = { ":q <CR>", "Quit" },
+	Q = { ":wq <CR>", "Save and Quit" },
+	e = { ":NvimTreeToggle <CR>", "Explorer" },
+	C = { ":e ~/AppData/Local/nvim/init.lua <CR>", "Configuartion" },
+	f = {
+		name = "File",
+		f = { ":Telescope find_files <CR>", "Find Files" },
+		m = { ":vim.lsp.buf.format() <CR>", "Format"}
 	},
 	g = {
 		name = "Git",
 		i = { ":!Git init<cr>", "Init" },
 		a = { ":!Git add .<cr>", "Add File" },
-		c = { ":!Git commit -m ''<cr>", "Commit" },
+		c = { ":!Git commit -m 'nothing'<cr>", "Commit" },
 		p = { ":!Git push<cr>", "Push" },
 		P = { ":!Git pull<cr>", "Pull" },
 	}

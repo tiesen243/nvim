@@ -1,33 +1,33 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-  return
+	return
 end
 
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
-  [[█████████╗██╗███████╗██████╗███████╗███╗   ██╗]],
-  [[ ╚══██╔══╝██║██╔════╝██╔═══╝██╔════╝████╗  ██║]],
-  [[    ██║   ██║█████╗  ██████╗█████╗  ██╔██╗ ██║]],
-  [[    ██║   ██║██╔══╝  ╚═══██║██╔══╝  ██║╚██╗██║]],
-  [[    ██║   ██║███████╗██████║███████╗██║ ╚████║]],
-  [[    ╚═╝   ╚═╝╚══════╝╚═════╝╚══════╝╚═╝  ╚═══╝]]
+	[[█████████╗██╗███████╗██████╗███████╗███╗   ██╗]],
+	[[ ╚══██╔══╝██║██╔════╝██╔═══╝██╔════╝████╗  ██║]],
+	[[    ██║   ██║█████╗  ██████╗█████╗  ██╔██╗ ██║]],
+	[[    ██║   ██║██╔══╝  ╚═══██║██╔══╝  ██║╚██╗██║]],
+	[[    ██║   ██║███████╗██████║███████╗██║ ╚████║]],
+	[[    ╚═╝   ╚═╝╚══════╝╚═════╝╚══════╝╚═╝  ╚═══╝]]
 }
 
 dashboard.section.buttons.val = {
-  dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-  dashboard.button("c", "  Configuration", ":e ~/AppData/local/nvim/init.lua <CR>"),
-  dashboard.button("s", "  Update plugins", ":PackerSync <CR>"),
-  dashboard.button("q", "  Quit", ":qa <CR>")
+	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
+	dashboard.button("c", "  Configuration", ":e ~/AppData/local/nvim/init.lua <CR>"),
+	dashboard.button("s", "  Update plugins", ":PackerSync <CR>"),
+	dashboard.button("q", "  Quit", ":qa <CR>")
 }
 dashboard.section.buttons.opts = {
-  spacing = 0,
-  position = "center"
+	spacing = 0,
+	position = "center"
 }
 
 local function footer()
-  return "ゆきぬ"
+	return "ゆきぬ"
 end
 
 dashboard.section.footer.val = footer()

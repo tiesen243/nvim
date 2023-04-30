@@ -34,7 +34,7 @@ local function footer()
 		[[]],
 		[[]],
 		[[Do your best! The rest will come!]],
-		[[                             QN  ]],
+		[[                                 ]],
 		[[]],
 		[[]],
 	}

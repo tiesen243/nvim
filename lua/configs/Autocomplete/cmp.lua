@@ -1,5 +1,15 @@
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 
+local cmp_status, cmp = pcall(require, "cmp")
+if not cmp_status then
+	return
+end
+
+local lspkind_status, lspkind = pcall(require, "lspkind")
+if not lspkind_status then
+	return
+end
+
 local has_words_before = function()
 	unpack = unpack or table.unpack
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -10,17 +20,18 @@ local feedkey = function(key, mode)
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-local cmp = require 'cmp'
 cmp.setup({
 	snippet = {
 		expand = function(args)
 			vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
+
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
@@ -35,19 +46,26 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 	}),
+
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' },
-	}, {
 		{ name = 'buffer' },
-	})
+	}),
+
+	formatting = {
+		format = lspkind.cmp_format({
+			with_text = true,
+			maxwidth = 50,
+			ellipsis_char = ' ',
+		})
+	}
 })
 
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
 	sources = cmp.config.sources({
 		{ name = 'cmp_git' },
-	}, {
 		{ name = 'buffer' },
 	})
 })
@@ -62,8 +80,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({
-		{ name = 'path' }
-	}, {
+		{ name = 'path' },
 		{ name = 'cmdline' }
 	})
 })

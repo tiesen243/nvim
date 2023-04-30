@@ -15,11 +15,16 @@ return require('packer').startup(function(use)
 	-- Packer
 	use 'wbthomason/packer.nvim'
 
-	-- Interface Configuration --
+
+	-- Interface Plugins --
 	-- Themes
 	use 'dracula/vim'
 	use 'tribela/vim-transparent'
-
+	-- GUI
+	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-tree/nvim-web-devicons'
+	use 'nvim-lualine/lualine.nvim'
+	use { 'akinsho/bufferline.nvim', tag = "*" }
 	-- Dashboard
 	use {
 		'goolord/alpha-nvim',
@@ -28,41 +33,29 @@ return require('packer').startup(function(use)
 			require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
 		end
 	}
+	-- Which Key
 	use 'folke/which-key.nvim'
-
-	-- GUI
-	use 'nvim-tree/nvim-tree.lua'
-	use 'nvim-tree/nvim-web-devicons'
-	use 'nvim-lualine/lualine.nvim'
-	use { 'akinsho/bufferline.nvim', tag = "*" }
-
-	-- Language Server Configuration --
-	-- Syntax Highlighting
-	use 'nvim-treesitter/nvim-treesitter'
-
-	-- Language Server Protocol
+	-- Telescope
 	use {
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-		run = ":MasonUpdate"
+		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
-	use { 'glepnir/lspsaga.nvim', branch = 'main' }
-	use 'onsails/lspkind.nvim'
-	use 'jose-elias-alvarez/typescript.nvim'
+	use 'nvim-telescope/telescope-media-files.nvim'
+
 
 	-- Auto Complete
+	-- CMP
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-vsnip'
-
 	-- Copilot
 	use 'github/copilot.vim'
-
-	-- Utility Configuration --
+	-- Auto Close
+	use 'windwp/nvim-autopairs'
+	use 'windwp/nvim-ts-autotag'
 	-- Comment
 	use { 'terrortylor/nvim-comment',
 		config = function()
@@ -71,15 +64,27 @@ return require('packer').startup(function(use)
 	}
 
 
-	-- Auto Pairs
-	use 'windwp/nvim-autopairs'
-
-	-- Telescope
+	-- Language Server Configuration --
+	-- Language Server Protocol
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		requires = { { 'nvim-lua/plenary.nvim' } }
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'neovim/nvim-lspconfig',
+		run = ':MasonUpdate'
 	}
-	use 'nvim-telescope/telescope-media-files.nvim'
+	use { 'glepnir/lspsaga.nvim', branch = 'main' }
+	use 'onsails/lspkind.nvim'
+	use 'jose-elias-alvarez/typescript.nvim'
+	-- Syntax Highlighting
+	use 'nvim-treesitter/nvim-treesitter'
+	-- Formatting and linting
+	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'jayp0521/mason-null-ls.nvim'
+
+
+	-- Git Plugins --
+	use 'lewis6991/gitsigns.nvim'
+
 
 	if packer_bootstrap then
 		require('packer').sync()

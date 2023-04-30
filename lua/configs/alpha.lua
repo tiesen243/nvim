@@ -16,6 +16,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("E", "  Files Explore", ":NvimTreeFindFileToggle<CR>"),
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/AppData/local/nvim/init.lua <CR>"),
 	dashboard.button("s", "  Update plugins", ":PackerSync <CR>"),
@@ -27,7 +28,16 @@ dashboard.section.buttons.opts = {
 }
 
 local function footer()
-	return "ゆきぬ"
+	return {
+		[[]],
+		[[]],
+		[[]],
+		[[]],
+		[[Do your best! The rest will come!]],
+		[[                             QN  ]],
+		[[]],
+		[[]],
+	}
 end
 
 dashboard.section.footer.val = footer()

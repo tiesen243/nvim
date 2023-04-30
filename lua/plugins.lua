@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
 	-- Interface Plugins --
 	-- Themes
 	use 'folke/tokyonight.nvim'
+	use 'dracula/vim'
+	use 'xiyaowong/transparent.nvim'
 	-- GUI
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'

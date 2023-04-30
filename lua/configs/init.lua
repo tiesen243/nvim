@@ -4,7 +4,7 @@ require("configs.Interface.lualine")
 require("configs.Interface.bufferline")
 require("configs.Interface.alpha")
 require("configs.Interface.whichkey")
-require("configs.Interface.tokyonight")
+require("configs.Interface.theme")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")

@@ -13,7 +13,9 @@ if not mason_null_ls_status then
 	return
 end
 
-mason.setup()
+mason.setup({
+	PATH = "prepend",
+})
 mason_lsp.setup({
 	ensure_installed = {
 		-- Lua

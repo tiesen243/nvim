@@ -10,6 +10,7 @@ g.python3_host_prog = '~/AppData/Local/Programs/Python/Python311/python.exe'
 
 -- General
 opt.autowrite = true
+opt.syntax = 'on'
 opt.autoread = true
 opt.cursorline = false
 opt.number = true

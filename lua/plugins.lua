@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 	use { 'akinsho/bufferline.nvim', tag = "*" }
 
-																										-- Language Server Configuration --
+	-- Language Server Configuration --
 	-- Syntax Highlighting
 	use 'nvim-treesitter/nvim-treesitter'
 
@@ -45,7 +45,11 @@ return require('packer').startup(function(use)
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
+		run = ":MasonUpdate"
 	}
+	use { 'glepnir/lspsaga.nvim', branch = 'main' }
+	use 'onsails/lspkind.nvim'
+	use 'jose-elias-alvarez/typescript.nvim'
 
 	-- Auto Complete
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -54,12 +58,11 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-vsnip'
-	use 'onsails/lspkind.nvim'
 
 	-- Copilot
 	use 'github/copilot.vim'
 
-																										-- Utility Configuration --
+	-- Utility Configuration --
 	-- Comment
 	use { 'terrortylor/nvim-comment',
 		config = function()

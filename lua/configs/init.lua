@@ -1,12 +1,20 @@
-require("configs.nvim-tree")
-require("configs.lualine")
-require("configs.bufferline")
-require("configs.treesitter")
-require("configs.alpha")
-require("configs.whichkey")
-require("configs.mason")
-require("configs.copilot")
-require("configs.cmp")
-require("configs.autopairs")
-require("configs.lsp")
+-- Interface
+require("configs.Interface.nvim-tree")
+require("configs.Interface.lualine")
+require("configs.Interface.bufferline")
+require("configs.Interface.alpha")
+require("configs.Interface.whichkey")
+
+-- Autocomplete
+require("configs.Autocomplete.copilot")
+require("configs.Autocomplete.cmp")
+require("configs.Autocomplete.autopairs")
+
+-- LSP
+require("configs.LSP.lsp")
+require("configs.LSP.mason")
+require("configs.LSP.treesitter")
+
+-- Others
 vim.cmd('colorscheme dracula')
+

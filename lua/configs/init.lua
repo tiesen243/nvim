@@ -4,7 +4,7 @@ require("configs.Interface.lualine")
 require("configs.Interface.bufferline")
 require("configs.Interface.alpha")
 require("configs.Interface.whichkey")
-vim.cmd("colorscheme dracula")
+require("configs.Interface.tokyonight")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")

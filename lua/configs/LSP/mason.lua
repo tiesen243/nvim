@@ -1,64 +1,43 @@
-local mason_status, mason = pcall(require, "mason")
+local mason_status, mason = pcall(require, 'mason')
 if not mason_status then
-	return
+  return
 end
 
-local mason_lsp_status, mason_lsp = pcall(require, "mason-lspconfig")
-if not mason_lsp_status then
-	return
+local mason_lspconfig_status, mason_lspconfig = pcall(require, 'mason-lspconfig')
+if not mason_lspconfig_status then
+  return
 end
 
-local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+local mason_null_ls_status, mason_null_ls = pcall(require, 'mason-null-ls')
 if not mason_null_ls_status then
-	return
+  return
 end
 
-mason.setup({
-	PATH = "prepend",
-})
-mason_lsp.setup({
-	ensure_installed = {
-		-- Lua
-		"lua_ls",
-		-- Python
-		"pyright",
-		-- C/C++
-		"clangd",
-		-- Web
-		"tsserver",
-		"eslint",
-		"html",
-		"cssls",
-		"tailwindcss",
-	},
-})
+mason.setup()
 
-local on_attach = function(_, _)
-	vim.keymap.set('n', '<leader>fr', require('telescope.builtin').lsp_references, {})
-end
-require("lspconfig").lua_ls.setup {
-	on_attach = on_attach,
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim', "feedkey" }
-			}
-		}
-	}
-}
+mason_lspconfig.setup({
+    ensure_installed = {
+      -- Lua
+      'lua_ls',
+      -- Python
+      'pyright',
+      -- C/C++
+      'clangd',
+      -- Web
+      'html',
+      'cssls',
+      'tailwindcss',
+      'tsserver',
+    }
+})
 
 mason_null_ls.setup({
-	ensure_installed = {
-		-- JS
-		"prettier",
-		"eslint_d",
-		-- C/C++, Arduino
-		"astyle",
-		"cpplint",
-		-- Python
-		"black",
-		"flake8",
-		-- Lua
-		"stylua",
-	}
+  ensure_installed = {
+    "prettier",
+    "eslint_d",
+    "stylelua",
+    "astyle",
+    "black",
+  }
 })
+

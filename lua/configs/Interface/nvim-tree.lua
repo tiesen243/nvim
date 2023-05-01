@@ -1,6 +1,35 @@
+local setup, tree = pcall(require, "nvim-tree")
+if not setup then
+  return
+end
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("nvim-tree").setup()
+vim.cmd([[ highlight NvimTreeIndentMarker guifg=#5f5faf ]])
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
+tree.setup({
+  renderer = {
+    icons = {
+      glyphs = {
+        folder = {
+          default = "",
+          open = "",
+          symlink = "",
+          arrow_closed = "",
+          arrow_open = "", 
+        },
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          untracked = "",
+          deleted = "",
+          ignored = "",
+        },
+      },
+    },
+  },
+})
+

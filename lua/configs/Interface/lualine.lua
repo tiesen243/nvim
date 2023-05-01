@@ -45,13 +45,17 @@ M.theme = function()
 	}
 end
 
+local status, lualine = pcall(require, 'lualine')
+if not status then
+  return
+end
 
-require('lualine').setup {
+lualine.setup {
 	options = {
 		icons_enabled = true,
 		theme = M.theme(),
 	},
-	disabled_filetypes = { 'packer', 'NvimTree' },
+	disabled_filetypes = { 'packer', 'NvimTree', 'Alpha' },
 	sections = {
 		lualine_a = {
 			{

@@ -11,75 +11,95 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
-	-- Packer
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
+local status, packer = pcall(require, 'packer')
+if not status then
+  return
+end
+
+return packer.startup(function(use)
+
+  -- Packer
 	use 'wbthomason/packer.nvim'
 
 
-	-- Interface Plugins --
+                    	-- Interface Plugins --
+
 	-- Themes
 	use 'dracula/vim'
 	use 'xiyaowong/transparent.nvim'
+
 	-- GUI
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 	use { 'akinsho/bufferline.nvim', tag = "*" }
+
 	-- Dashboard
-	use {
-		'goolord/alpha-nvim',
-		config = function()
-			require 'alpha'.setup(require 'alpha.themes.startify'.config)
-			require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
-		end
-	}
+	use 'goolord/alpha-nvim'
+
 	-- Which Key
 	use 'folke/which-key.nvim'
+
 	-- Telescope
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	use 'nvim-telescope/telescope-media-files.nvim'
 
+  -- Tmux Navigator
+  use 'christoomey/vim-tmux-navigator'
 
-	-- Auto Complete
+  -- Comment
+  use 'terrortylor/nvim-comment'
+
+
+                    	-- Auto Complete Plugins --
+
 	-- CMP
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/vim-vsnip'
-	use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
+
 	-- Copilot
 	use 'github/copilot.vim'
+
 	-- Auto Close
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
-	-- Comment
-	use { 'terrortylor/nvim-comment',
-		config = function()
-			require('nvim_comment').setup({ comment_empty = false })
-		end
-	}
 
 
-	-- Language Server Configuration --
+                    	-- Language Server Configuration --
+
 	-- Language Server Protocol
-	use {
-		'williamboman/mason.nvim',
-		'williamboman/mason-lspconfig.nvim',
-		'neovim/nvim-lspconfig',
-		run = ':MasonUpdate'
-	}
-	use { 'glepnir/lspsaga.nvim', branch = 'main' }
-	use 'onsails/lspkind.nvim'
-	use 'jose-elias-alvarez/typescript.nvim'
-	-- Syntax Highlighting
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig'
+
+  -- LSP Config
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'onsails/lspkind-nvim'
+  use {'glepnir/lspsaga.nvim', branch = 'main'}
+
+	-- Highlight Syntax
 	use 'nvim-treesitter/nvim-treesitter'
-	-- Formatting and linting
-	use 'jose-elias-alvarez/null-ls.nvim'
-	use 'jayp0521/mason-null-ls.nvim'
+
+  -- Formatting & Linting
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jay-babu/mason-null-ls.nvim'
 
 
 	-- Git Plugins --

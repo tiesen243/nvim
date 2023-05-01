@@ -11,7 +11,4 @@ require('bufferline').setup {
 	}
 }
 
-vim.cmd [[
-  nnoremap <silent> <leader>] :BufferLineCycleNext<CR>
-  nnoremap <silent> <leader>[ :BufferLineCyclePrev<CR>
-]]
+

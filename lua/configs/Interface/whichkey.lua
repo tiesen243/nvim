@@ -21,6 +21,13 @@ local mappings = {
 		p = { "<cmd>!Git push<cr>", "Push" },
 		P = { "<cmd>!Git pull<cr>", "Pull" },
 	},
+	p = {
+		name = "Packer",
+		c = { "<cmd>PackerCompile<cr>", "Compile" },
+		i = { "<cmd>PackerInstall<cr>", "Install" },
+		s = { "<cmd>PackerSync<cr>", "Sync" },
+		u = { "<cmd>PackerUpdate<cr>", "Update" },
+	},
 	l = {
 		name = "LSP",
 		g = {

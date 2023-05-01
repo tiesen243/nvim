@@ -15,6 +15,8 @@ dashboard.section.header.val = {
 	[[    ██║   ██║██╔══╝  ╚═══██║██╔══╝  ██║╚██╗██║]],
 	[[    ██║   ██║███████╗██████║███████╗██║ ╚████║]],
 	[[    ╚═╝   ╚═╝╚══════╝╚═════╝╚══════╝╚═╝  ╚═══╝]],
+	[[                                              ]],
+	[[                    @Tiesen226                ]],
 }
 
 dashboard.section.buttons.val = {
@@ -35,8 +37,8 @@ local function footer()
 		[[]],
 		[[]],
 		[[]],
-		[[Do your best! The rest will come!]],
-		[[                                 ]],
+		[[Losers should hurry up and scram! Wa ha ha!]],
+		[[                                    Duci <4]],
 		[[]],
 		[[]],
 	}

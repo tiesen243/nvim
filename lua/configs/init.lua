@@ -6,6 +6,7 @@ require("configs.Interface.alpha")
 require("configs.Interface.theme")
 require("configs.Interface.comment")
 require("configs.Interface.telescope")
+require("configs.Interface.whichkey")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")

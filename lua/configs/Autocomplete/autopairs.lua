@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-autopairs.setup {
+autopairs.setup({
 	check_ts = true,
 	ts_config = {
 		lua = { "string" },
@@ -21,7 +21,7 @@ autopairs.setup {
 		hightlight = "PmenuSel",
 		hightlight_grey = "LineNr",
 	},
-}
+})
 
 local cmp_autopairs_setup, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
 if not cmp_autopairs_setup then
@@ -32,8 +32,11 @@ if not cmp_setup then
 	return
 end
 
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done {
-	map_char = {
-		tex = ""
-	}
-})
+cmp.event:on(
+	"confirm_done",
+	cmp_autopairs.on_confirm_done({
+		map_char = {
+			tex = "",
+		},
+	})
+)

@@ -21,6 +21,22 @@ local mappings = {
 		p = { "<cmd>!Git push<cr>", "Push" },
 		P = { "<cmd>!Git pull<cr>", "Pull" },
 	},
+	l = {
+		name = "LSP",
+		g = {
+			name = "GoTo",
+			f = { "<cmd>Lspsaga lsp_finder<CR>", "LSP Finder" },
+			d = { "<cmd>Lspsaga peek_definition<CR>", "Peek Definition" },
+			D = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+			i = { "<cmd>Lspsaga implementation<CR>", "Implementation" },
+		},
+		r = { "<cmd>Lspsaga rename<CR>", "Rename" },
+		a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
+		d = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Diagnostics" },
+		d = { "<cmd>Lspsaga show_cursor_diagnostics<CR>", "Diagnostics" },
+		k = { "<cmd>Lspsaga hover_doc<CR>", "Hover Doc" },
+		o = { "<cmd>LSoutlineToggle<CR>", "Out Line Toggle" },
+	},
 }
 
 local opts = {

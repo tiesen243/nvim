@@ -1,18 +1,19 @@
 require("bufferline").setup({
 
 	options = {
-		indicator_icon = " ",
-		separator_style = { "", "" },
-		tab_size = 0,
-		buffer_close_icon = "",
-		modified_icon = "",
-		close_icon = "",
+		indicator_icon = "▎",
+		buffer_close_icon = "",
+		modified_icon = "●",
+		close_icon = "",
+		left_trunc_marker = "",
+		right_trunc_marker = "",
 		offsets = {
 			{
 				filetype = "NvimTree",
 				text = "File Explorer",
 				highlight = "Directory",
 				text_align = "center",
+				padding = 1,
 			},
 		},
 	},

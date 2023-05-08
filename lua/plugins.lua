@@ -30,7 +30,7 @@ return packer.startup(function(use)
 	-- Interface Plugins --
 
 	-- Themes
-	use("dracula/vim")
+	use("Mofiqul/dracula.nvim")
 	use("xiyaowong/transparent.nvim")
 
 	-- GUI

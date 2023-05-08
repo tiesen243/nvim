@@ -34,14 +34,23 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"tsserver",
+		-- C++
+		"clangd",
 	},
 })
 
 mason_null_ls.setup({
 	ensure_installed = {
+		-- Javascript
 		"prettier",
 		"eslint_d",
+		-- Lua
 		"stylelua",
+		-- Python
 		"black",
+		"flake8",
+		-- C++
+		"cpplint",
+		"clang_format",
 	},
 })

@@ -78,6 +78,9 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	-- Code Runner
+	use("CRAG666/code_runner.nvim")
+
 	-- Language Server Configuration --
 
 	-- Language Server Protocol

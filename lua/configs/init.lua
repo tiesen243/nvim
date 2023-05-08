@@ -12,6 +12,7 @@ require("configs.Interface.whichkey")
 require("configs.Autocomplete.copilot")
 require("configs.Autocomplete.cmp")
 require("configs.Autocomplete.autopairs")
+require("configs.Autocomplete.coderunner")
 
 -- LSP
 require("configs.LSP.treesitter")

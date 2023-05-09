@@ -70,3 +70,12 @@ km.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- Global
 g.maplocalleader = " "
 g.python3_host_prog = "~/AppData/Local/Programs/Python/Python311/python.exe"
+-- Hide Warning
+local notify = vim.notify
+vim.notify = function(msg, ...)
+	if msg:match("warning: multiple different client offset_encodings") then
+		return
+	end
+
+	notify(msg, ...)
+end

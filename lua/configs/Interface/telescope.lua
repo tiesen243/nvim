@@ -19,3 +19,5 @@ telescope.setup({
 		},
 	},
 })
+
+vim.cmd([[highlight TelescopeNormal none]])

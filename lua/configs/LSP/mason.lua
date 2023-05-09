@@ -50,7 +50,6 @@ mason_null_ls.setup({
 		"black",
 		"flake8",
 		-- C++
-		"cpplint",
 		"clang_format",
 	},
 })

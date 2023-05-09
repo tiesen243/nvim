@@ -39,8 +39,6 @@ local function footer()
 		[[]],
 		[[Losers should hurry up and scram! Wa ha ha!]],
 		[[                                    Duci <4]],
-		[[]],
-		[[]],
 	}
 end
 

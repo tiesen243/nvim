@@ -20,9 +20,11 @@ null_ls.setup({
 		formatting.clang_format,
 		diagnostics.flake8,
 		diagnostics.cpplint.with({
-			filter = { "-whitespace", "-legal/copyright" },
-		}),
-		diagnostics.eslint_d.with({ -- js/ts linter
+      condition = function(utils)
+        return utils.root_has_file(".cpplint")
+      end,
+    }),
+		diagnostics.eslint_d.with({ 
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js")
 			end,

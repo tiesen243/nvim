@@ -22,5 +22,6 @@ treesitter.setup({
 		"tsx",
 		"gitignore",
 		"markdown",
+		"markdown_inline",
 	},
 })

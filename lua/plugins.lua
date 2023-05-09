@@ -35,10 +35,7 @@ return packer.startup(function(use)
 
 	-- GUI
 	use("nvim-tree/nvim-tree.lua")
-	use({
-		"nvim-tree/nvim-web-devicons",
-		requires = { { "DaikyXendo/nvim-material-icon" } },
-	})
+	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "*" })
 

@@ -15,12 +15,16 @@ coderunner.setup({
 	filetype = {
 		python = {
 			"cd $dir &&",
-			"python -u $file",
+			"py $file",
 		},
 		cpp = {
 			"cd $dir &&",
 			"g++ $fileName -o $fileNameWithoutExt &&",
 			"$dir/$fileNameWithoutExt",
+		},
+		js = {
+			"cd $dir &&",
+			"node $file",
 		},
 	},
 })

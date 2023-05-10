@@ -51,5 +51,6 @@ mason_null_ls.setup({
 		"flake8",
 		-- C++
 		"clang_format",
+		"cpplint",
 	},
 })

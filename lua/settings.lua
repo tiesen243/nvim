@@ -25,6 +25,7 @@ opt.smartcase = true
 
 -- Cursor Line
 opt.cursorline = false
+opt.cursorcolumn = false
 
 -- Appearance
 opt.termguicolors = false
@@ -61,6 +62,7 @@ km.set("n", "<leader>]", ":BufferLineCycleNext<CR>")
 km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>")
 -- Comment
 km.set("n", "<leader>/", ":CommentToggle<CR>")
+vim.cmd([[ vnoremap <C-/> :'<,'>CommentToggle<CR> ]])
 -- Telescope
 km.set("n", "<leader>ff", ":Telescope find_files<CR>")
 km.set("n", "<leader>fg", ":Telescope live_grep<CR>")

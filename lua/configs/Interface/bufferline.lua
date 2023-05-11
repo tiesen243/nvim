@@ -30,4 +30,3 @@ vim.cmd([[
   autocmd ColorScheme * highlight BufferLineBackground guifg=none guibg=none
   autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white guibg=none
 ]])
-vim.opt.mousemoveevent = true

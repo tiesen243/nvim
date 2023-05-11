@@ -46,6 +46,7 @@ opt.splitright = true
 -- Others
 opt.iskeyword:append("-")
 opt.fillchars:append({ eob = " " })
+opt.mousemoveevent = true
 
 -- Auto
 opt.autowrite = true

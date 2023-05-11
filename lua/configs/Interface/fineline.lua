@@ -1,11 +1,12 @@
-local status, cmdline = pcall(require, "fine-cmdline")
+local status, fineline = pcall(require, "fine-cmdline")
+local fn = fineline.fn
 if not status then
 	return
 end
 
 vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 
-cmdline.setup({
+fineline.setup({
 	popup = {
 		position = {
 			row = "10%",
@@ -25,5 +26,12 @@ cmdline.setup({
 		enable_keymaps = true,
 		smart_history = true,
 		prompt = "> ",
+	},
+	hooks = {
+		set_keymaps = function(imap)
+			imap("<Esc>", fn.close)
+			imap("<C-k>", fn.up_search_history)
+			imap("<C-j>", fn.down_search_history)
+		end,
 	},
 })

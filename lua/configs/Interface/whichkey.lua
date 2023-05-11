@@ -15,7 +15,7 @@ end
 
 local commit = function()
 	local mess = vim.fn.input("Commit message: ")
-	local cmd = "!Git commit -m " .. mess
+	local cmd = '!Git commit -m "' .. mess .. '"'
 	vim.cmd(cmd)
 end
 

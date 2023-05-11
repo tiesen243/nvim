@@ -8,6 +8,7 @@ require("configs.Interface.comment")
 require("configs.Interface.telescope")
 require("configs.Interface.whichkey")
 require("configs.Interface.toggleterm")
+require("configs.Interface.float-command-line")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")

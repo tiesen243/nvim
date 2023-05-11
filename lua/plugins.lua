@@ -62,6 +62,14 @@ return packer.startup(function(use)
 	-- Float Terminal
 	use({ "akinsho/toggleterm.nvim", tag = "*" })
 
+	-- Float Command Line
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+
 	-- Auto Complete Plugins --
 
 	-- CMP

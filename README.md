@@ -1,8 +1,6 @@
 # My Neovim Config
 
-> If we pull together and commit ourselves, then we can push through anything.
-
-![image](https://github.com/Tiesen226/nvim/assets/101703006/b36149de-59d7-445d-9513-781cd56ac01b)
+![1683780204630](https://github.com/Tiesen226/nvim/assets/101703006/08966af0-34f2-406f-a564-628ad47f6ecd)
 
 **Requiment**<br/>
 

@@ -3,13 +3,27 @@ if not status then
 	return
 end
 
+local Terminal = require("toggleterm.terminal").Terminal
+local toggle_lazygit = function()
+	local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
+	return lazygit:toggle()
+end
+local toggle_term = function()
+	local term = Terminal:new({ cmd = "powershell -NoLogo", direction = "float" })
+	return term:toggle()
+end
+
 local mappings = {
-	q = { "<cmd>q<cr>", "Quit" },
-	Q = { "<cmd>wq<cr>", "Save and Quit" },
+	q = { "<cmd>wqa<cr>", "Save and Quit" },
 	e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	r = { "<cmd>RunCode<cr>", "Run Code" },
+	t = {
+		name = "Terminal",
+		t = { toggle_term, "Toggle" },
+		l = { toggle_lazygit, "Lazygit" },
+	},
 	f = {
-		name = "Find",
+		name = "Fuzzy Finder",
 		f = { "<cmd>Telescope find_files<cr>", "Files" },
 		g = { "<cmd>Telescope live_grep<cr>", "Grep" },
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
@@ -55,6 +69,26 @@ local opts = {
 	noremap = true,
 	nowait = true,
 }
-vim.o.timeoutlen = 300
+vim.o.timeoutlen = 100
 vim.o.timeout = true
 wk.register(mappings, opts)
+
+wk.setup({
+	window = {
+		border = "single",
+		winblend = 0,
+		position = "bottom",
+	},
+	layout = {
+		spacing = 10,
+		align = "center",
+	},
+	triggers_blacklist = {
+		n = { "v", "y", "[", "]", "d", "g", "'", "z", "c" },
+		i = { "j", "k" },
+		v = { "j", "k" },
+	},
+	triggers = "<leader>",
+	shows_help = false,
+	ignore_missing = false,
+})

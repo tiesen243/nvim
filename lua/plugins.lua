@@ -59,6 +59,9 @@ return packer.startup(function(use)
 	-- Comment
 	use("terrortylor/nvim-comment")
 
+	-- Float Terminal
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
+
 	-- Auto Complete Plugins --
 
 	-- CMP

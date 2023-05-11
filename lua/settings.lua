@@ -52,23 +52,19 @@ opt.autowrite = true
 opt.autoread = true
 opt.autochdir = true
 
+-- Shell
+-- opt.shell = "powershell"
+
 -- Key Maping
 g.mapleader = " "
 km.set("n", "<C-s>", ":w<CR>")
 -- Dashboard
-km.set("n", "<leader>;", ":Alpha<CR>")
+km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard" })
 -- Buffer
-km.set("n", "<leader>]", ":BufferLineCycleNext<CR>")
-km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>")
+km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
 -- Comment
-km.set("n", "<leader>/", ":CommentToggle<CR>")
-vim.cmd([[ vnoremap <C-/> :'<,'>CommentToggle<CR> ]])
--- Telescope
-km.set("n", "<leader>ff", ":Telescope find_files<CR>")
-km.set("n", "<leader>fg", ":Telescope live_grep<CR>")
-km.set("n", "<leader>fb", ":Telescope buffers<CR>")
--- Tree
-km.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment" })
 
 -- Global
 g.maplocalleader = " "

@@ -25,6 +25,9 @@ _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lu
 |`<leader>ff`|Find Files |
 |`<leader>fb`|Find Buffer |
 |`<leader>fg`|Find Grep |
+|`<leader>t`|Terminal |
+|`<leader>tt`|Toggle Terminal |
+|`<leader>tl`|Toggle Lazygit |
 |`<leader>g` |Git |
 |`<leader>ga`|Git add |
 |`<leader>gc`|Git commit |

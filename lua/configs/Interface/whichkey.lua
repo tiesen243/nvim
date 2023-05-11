@@ -81,7 +81,7 @@ wk.register(mappings, opts)
 
 wk.setup({
 	window = {
-		border = "single",
+		border = "rounded",
 		winblend = 0,
 		position = "bottom",
 	},

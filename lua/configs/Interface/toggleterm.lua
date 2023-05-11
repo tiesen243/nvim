@@ -10,8 +10,8 @@ terminal.setup({
 	auto_scoll = true,
 	float_opts = {
 		border = "curved",
-		width = 100,
-		height = 25,
+		width = 110,
+		height = 18,
 		zindex = 6969,
 		winblend = 0,
 	},

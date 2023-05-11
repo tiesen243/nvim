@@ -9,8 +9,8 @@ coderunner.setup({
 	startinsert = true,
 	float = {
 		width = 0.9,
-		height = 0.6,
-		border = "single",
+		height = 0.69,
+		border = "rounded",
 	},
 	filetype = {
 		python = {

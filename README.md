@@ -5,9 +5,10 @@
 ![image](https://github.com/Tiesen226/nvim/assets/101703006/b36149de-59d7-445d-9513-781cd56ac01b)
 
 **Requiment**<br/>
-1. Nodejs: ```npm i -g neovim```
-2. Python: install package with pip: ```neovim, black, flake8, cpplint, clang-format```
-3. C/C++: install ```gcc conpile``` with mingw64, ```clang``` with visual studio installer
+
+1. Nodejs: `npm i -g neovim`
+2. Python: install package with pip: `neovim, black, flake8, cpplint, clang-format`
+3. C/C++: install `gcc conpile` with mingw64, `clang` with visual studio installer
 
 **Key Mappings**<br/>
 _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lua`)_

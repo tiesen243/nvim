@@ -13,14 +13,20 @@ local toggle_term = function()
 	return term:toggle()
 end
 
+local commit = function()
+	local mess = vim.fn.input("Commit message: ")
+	local cmd = "!Git commit -m " .. mess
+	vim.cmd(cmd)
+end
+
 local mappings = {
 	q = { "<cmd>wqa<cr>", "Save and Quit" },
 	e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	r = { "<cmd>RunCode<cr>", "Run Code" },
 	t = {
 		name = "Terminal",
-		t = { toggle_term, "Toggle" },
-		l = { toggle_lazygit, "Lazygit" },
+		t = { toggle_term, "Toggle Terminal" },
+		l = { toggle_lazygit, "Toggle Lazygit" },
 	},
 	f = {
 		name = "Fuzzy Finder",
@@ -32,7 +38,7 @@ local mappings = {
 		name = "Git",
 		s = { "<cmd>!Git status<cr>", "Status" },
 		a = { "<cmd>!Git add .<cr>", "Add" },
-		c = { "<cmd>!Git commit -m ''<cr>", "Commit" },
+		c = { commit, "Commit" },
 		p = { "<cmd>!Git push<cr>", "Push" },
 		P = { "<cmd>!Git pull<cr>", "Pull" },
 	},

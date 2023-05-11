@@ -52,10 +52,7 @@ opt.autowrite = true
 opt.autoread = true
 opt.autochdir = true
 
--- Shell
--- opt.shell = "powershell"
-
--- Key Maping
+-- Key Mappings
 g.mapleader = " "
 km.set("n", "<C-s>", ":w<CR>")
 -- Dashboard
@@ -66,15 +63,11 @@ km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
 -- Comment
 km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment" })
 
--- Global
-g.maplocalleader = " "
-g.python3_host_prog = "~/AppData/Local/Programs/Python/Python311/python.exe"
 -- Hide Warning
 local notify = vim.notify
 vim.notify = function(msg, ...)
 	if msg:match("warning: multiple different client offset_encodings") then
 		return
 	end
-
 	notify(msg, ...)
 end

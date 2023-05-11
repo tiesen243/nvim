@@ -24,6 +24,10 @@ cmp.setup({
 		end,
 	},
 
+	window = {
+		completion = cmp.config.window.bordered(),
+	},
+
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<Tab>"] = cmp.mapping.select_next_item(),
@@ -46,3 +50,7 @@ cmp.setup({
 		}),
 	},
 })
+
+vim.cmd([[ 
+  highlight Pmenu guifg=#ffffff guibg=none
+]])

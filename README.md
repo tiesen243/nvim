@@ -30,6 +30,10 @@ _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lu
 |`<leader>tt`|Toggle Terminal |
 |`<leader>tl`|Toggle Lazygit |
 |`<leader>g` |Git |
+|`<leader>gi`|Git init |
+|`<leader>gb`|Git branch |
+|`<leader>gr`|Git remote |
+|`<leader>gC`|Git checkout |
 |`<leader>ga`|Git add |
 |`<leader>gc`|Git commit |
 |`<leader>gs`|Git status |

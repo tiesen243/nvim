@@ -55,7 +55,7 @@ lualine.setup({
 		icons_enabled = true,
 		theme = M.theme(),
 	},
-	disabled_filetypes = { "packer", "NvimTree", "Alpha" },
+	disabled_filetypes = { "packer", "NvimTree", "alpha" },
 	sections = {
 		lualine_a = {
 			{

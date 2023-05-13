@@ -73,6 +73,12 @@ return packer.startup(function(use)
 	-- Colorizer
 	use("norcalli/nvim-colorizer.lua")
 
+	-- Indent Blankline
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- Notify
+	use("rcarriga/nvim-notify")
+
 	-- Auto Complete Plugins --
 
 	-- CMP

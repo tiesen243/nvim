@@ -3,8 +3,7 @@ if not status_bl then
 	return
 end
 
-vim.opt.termguicolors = true
-vim.opt.list = false
+vim.opt.list = true
 vim.g.indent_blankline_show_current_context = true
 vim.cmd([[highlight IndentBlanklineContextChar guifg=#ffffff gui=nocombine]])
 

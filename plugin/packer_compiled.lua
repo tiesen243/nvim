@@ -146,6 +146,11 @@ local no_errors, error_msg = pcall(function()
 			path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
 			url = "https://github.com/lewis6991/gitsigns.nvim",
 		},
+		["indent-blankline.nvim"] = {
+			loaded = true,
+			path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+			url = "https://github.com/lukas-reineke/indent-blankline.nvim",
+		},
 		["lspkind-nvim"] = {
 			loaded = true,
 			path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
@@ -210,6 +215,11 @@ local no_errors, error_msg = pcall(function()
 			loaded = true,
 			path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
 			url = "https://github.com/neovim/nvim-lspconfig",
+		},
+		["nvim-notify"] = {
+			loaded = true,
+			path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+			url = "https://github.com/rcarriga/nvim-notify",
 		},
 		["nvim-tree.lua"] = {
 			loaded = true,

@@ -11,6 +11,8 @@ require("configs.Interface.toggleterm")
 require("configs.Interface.fineline")
 require("configs.Interface.colorizer")
 require("configs.Interface.coderunner")
+require("configs.Interface.blankline")
+require("configs.Interface.notify")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")

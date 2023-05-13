@@ -70,7 +70,7 @@ km.set("n", "-", "<C-x>", { desc = "Decrement" })
 -- Select All
 km.set("n", "<C-a>", "ggVG", { desc = "Select All" })
 
--- Hide Warning
+-- Notify
 local notify = vim.notify
 vim.notify = function(msg, ...)
 	if msg:match("warning: multiple different client offset_encodings") then
@@ -78,3 +78,4 @@ vim.notify = function(msg, ...)
 	end
 	notify(msg, ...)
 end
+vim.notify = require("notify")

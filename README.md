@@ -7,6 +7,8 @@
 1. Nodejs: `npm i -g neovim`
 2. Python: install package with pip: `neovim, black, flake8, cpplint, clang-format`
 3. C/C++: install `gcc conpile` with mingw64, `clang` with visual studio installer
+4. Nerdfont to dislay file icon
+5. Set opacity of your terminal to use transparent background
 
 **Key Mappings**<br/>
 _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lua`)_

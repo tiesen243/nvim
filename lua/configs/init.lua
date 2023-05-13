@@ -9,6 +9,8 @@ require("configs.Interface.telescope")
 require("configs.Interface.whichkey")
 require("configs.Interface.toggleterm")
 require("configs.Interface.fineline")
+require("configs.Interface.colorizer")
+require("configs.Interface.coderunner")
 
 -- Autocomplete
 require("configs.Autocomplete.copilot")
@@ -23,7 +25,4 @@ require("configs.LSP.lspsaga")
 require("configs.LSP.null-ls")
 
 -- Git
-require("configs.git")
-
--- Code Runner
-require("configs.coderunner")
+require("configs.Git.gitsigns")

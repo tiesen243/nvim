@@ -70,6 +70,9 @@ return packer.startup(function(use)
 		},
 	})
 
+	-- Colorizer
+	use("norcalli/nvim-colorizer.lua")
+
 	-- Auto Complete Plugins --
 
 	-- CMP
@@ -88,9 +91,6 @@ return packer.startup(function(use)
 	-- Auto Close
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
-
-	-- Code Runner
-	use("CRAG666/code_runner.nvim")
 
 	-- Language Server Configuration --
 
@@ -113,6 +113,9 @@ return packer.startup(function(use)
 
 	-- Git Plugins --
 	use("lewis6991/gitsigns.nvim")
+
+	-- Code Runner
+	use("CRAG666/code_runner.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

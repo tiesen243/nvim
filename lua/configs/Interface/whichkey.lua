@@ -3,6 +3,7 @@ if not status then
 	return
 end
 
+-- Terminal
 local Terminal = require("toggleterm.terminal").Terminal
 local toggle_lazygit = function()
 	local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
@@ -13,9 +14,20 @@ local toggle_term = function()
 	return term:toggle()
 end
 
+-- Git
 local commit = function()
 	local mess = vim.fn.input("Commit message: ")
 	local cmd = '!Git commit -m "' .. mess .. '"'
+	vim.cmd(cmd)
+end
+local branch = function()
+	local branch = vim.fn.input("Branch name: ")
+	local cmd = '!Git checkout -b "' .. branch .. '"'
+	vim.cmd(cmd)
+end
+local remote = function()
+	local repo = vim.fn.input("Repository: ")
+	local cmd = '!git remote add origin "' .. repo .. '"'
 	vim.cmd(cmd)
 end
 
@@ -36,6 +48,9 @@ local mappings = {
 	},
 	g = {
 		name = "Git",
+		i = { "<cmd>!Git init<cr>", "Init" },
+		b = { branch, "Branch" },
+		r = { remote, "Remote" },
 		s = { "<cmd>!Git status<cr>", "Status" },
 		a = { "<cmd>!Git add .<cr>", "Add" },
 		c = { commit, "Commit" },

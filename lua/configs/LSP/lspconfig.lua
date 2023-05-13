@@ -35,6 +35,7 @@ end
 
 -- Enable auto completion
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Web
 lspconfig["html"].setup({
@@ -50,6 +51,16 @@ lspconfig["cssls"].setup({
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig["emmet_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
+	init_options = {
+		documentFormatting = true,
+		["bem.enabled"] = true,
+	},
 })
 
 -- C/C++

@@ -34,6 +34,7 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"tsserver",
+		"emmet_ls",
 		-- C++
 		"clangd",
 	},

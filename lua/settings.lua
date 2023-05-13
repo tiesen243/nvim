@@ -56,6 +56,7 @@ opt.autochdir = true
 -- Key Mappings
 g.mapleader = " "
 km.set("n", "<C-s>", ":w<CR>", { desc = "Save" })
+km.set("n", "<C-z>", ":undo<CR>", { desc = "Undo" })
 -- Dashboard
 km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard" })
 -- Buffer

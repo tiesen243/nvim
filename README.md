@@ -7,8 +7,13 @@
 1. Nodejs: `npm i -g neovim`
 2. Python: install package with pip: `neovim, black, flake8, cpplint, clang-format`
 3. C/C++: install `gcc conpile` with mingw64, `clang` with visual studio installer
-4. Nerdfont to dislay file icon
-5. Set opacity of your terminal to use transparent background
+4. Install packer at [here](https://github.com/wbthomason/packer.nvim)
+5. Nerdfont to dislay file icon
+6. Set opacity of your terminal to use transparent background
+
+**Try my config**<br/>
+_Windows_<br/>
+`git clone git@github.com:Tiesen226/nvim.git "$env:LOCALAPPDATA"`
 
 **Key Mappings**<br/>
 _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lua`)_

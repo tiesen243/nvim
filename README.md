@@ -11,7 +11,8 @@
 5. Nerdfont to dislay file icon
 6. Set opacity of your terminal to use transparent background
 
-**Try my config**<br/> 
+**Try my config**<br/>
+
 > Windows<br/>
 
       git clone git@github.com:Tiesen226/nvim.git "$env:LOCALAPPDATA"

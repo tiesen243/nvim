@@ -32,8 +32,8 @@ _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lu
 |`<leader>g` |Git |
 |`<leader>gi`|Git init |
 |`<leader>gb`|Git branch |
-|`<leader>gr`|Git remote |
 |`<leader>gC`|Git checkout |
+|`<leader>gr`|Git remote |
 |`<leader>ga`|Git add |
 |`<leader>gc`|Git commit |
 |`<leader>gs`|Git status |
@@ -50,6 +50,7 @@ _The default `<leader>` shortcut is `<space>` (you can change it in `settings.lu
 |`<C-k>` |Tmux Navigate Up |
 |`<C-l>` |Tmux Navigate Right|
 |`<C-s>` |Save file |
+|`<C-z>`|Undo|
 
 _(\*): I just config for run C++ and Python file (you can add more in `coderunner.lua`)_
 

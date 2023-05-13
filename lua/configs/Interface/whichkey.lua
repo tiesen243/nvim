@@ -22,12 +22,17 @@ local commit = function()
 end
 local branch = function()
 	local branch = vim.fn.input("Branch name: ")
-	local cmd = '!Git checkout -b "' .. branch .. '"'
+	local cmd = '!Git branch -m "' .. branch .. '"'
 	vim.cmd(cmd)
 end
 local remote = function()
 	local repo = vim.fn.input("Repository: ")
-	local cmd = '!git remote add origin "' .. repo .. '"'
+	local cmd = '!Git remote add origin "' .. repo .. '"'
+	vim.cmd(cmd)
+end
+local checkout = function()
+	local branch = vim.fn.input("Branch name: ")
+	local cmd = '!Git checkout "' .. branch .. '"'
 	vim.cmd(cmd)
 end
 
@@ -54,6 +59,7 @@ local mappings = {
 		s = { "<cmd>!Git status<cr>", "Status" },
 		a = { "<cmd>!Git add .<cr>", "Add" },
 		c = { commit, "Commit" },
+		C = { checkout, "Checkout" },
 		p = { "<cmd>!Git push<cr>", "Push" },
 		P = { "<cmd>!Git pull<cr>", "Pull" },
 	},

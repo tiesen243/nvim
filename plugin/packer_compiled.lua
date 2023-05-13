@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
-    url = "https://github.com/mattn/emmet-vim"
-  },
   ["fine-cmdline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fine-cmdline.nvim",

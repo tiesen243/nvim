@@ -73,10 +73,9 @@ km.set("n", "<C-a>", "ggVG", { desc = "Select All" })
 -- Notify
 local notify = vim.notify
 notify = require("notify")
-notify = function(msg, ...)
+vim.notify = function(msg, ...)
 	if msg:match("warning: multiple different client offset_encodings") then
 		return
 	end
 	notify(msg, ...)
 end
-vim.notify = notify

@@ -71,7 +71,7 @@ return packer.startup(function(use)
 	})
 
 	-- Colorizer
-	use("norcalli/nvim-colorizer.lua")
+use'NvChad/nvim-colorizer.lua'
 
 	-- Indent Blankline
 	use("lukas-reineke/indent-blankline.nvim")

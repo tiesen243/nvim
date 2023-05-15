@@ -20,11 +20,14 @@ dashboard.section.header.val = {
 }
 
 dashboard.section.buttons.val = {
-	dashboard.button("e", "  Files Explore", ":NvimTreeFindFileToggle<CR>"),
+	dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/AppData/local/nvim/init.lua <CR>"),
+	dashboard.button("w", "  Find word", ":Telescope live_grep <CR>"),
+	dashboard.button("o", "  Recently opened files", ":Telescope oldfiles <CR>"),
+	dashboard.button("e", "  Files Explore", ":NvimTreeFindFileToggle<CR>"),
+	dashboard.button("c", "  Configuration", ":e ~/AppData/local/nvim/init.lua<CR>"),
 	dashboard.button("s", "  Update plugins", ":PackerSync <CR>"),
-	dashboard.button("q", "  Quit", ":qa <CR>"),
+	dashboard.button("q", "  Quit", ":wqa <CR>"),
 }
 dashboard.section.buttons.opts = {
 	spacing = 0,

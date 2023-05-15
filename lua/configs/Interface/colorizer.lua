@@ -12,9 +12,10 @@ colorizer.setup({
 		tailwind = true,
 		sass = { enable = true, parsers = { "css" } },
 
-		mode = "virtualtext", -- "foreground" or "background" or "virtualtext"
+		mode = "foreground", -- "foreground" or "background" or "virtualtext"
 		virtualtext = "■",
 		always_update = true,
 	},
 	buftypes = { "*" },
 })
+-- black brown red orange yellow green blue purple gray white

@@ -10,10 +10,10 @@ vim.g.nvim_tree_gitignore = 1
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#5f5faf ]])
 
 tree.setup({
-	hijack_cursor = false,
+	hijack_cursor = true,
 	auto_reload_on_write = true,
 	renderer = {
-		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+		special_files = { "README.md", "readme.md", ".git" },
 		highlight_git = true,
 		highlight_opened_files = "true",
 		icons = {
@@ -37,7 +37,7 @@ tree.setup({
 			},
 		},
 		indent_markers = {
-			enable = false,
+			enable = true,
 			inline_arrows = true,
 			icons = {
 				corner = "└",
@@ -64,11 +64,11 @@ tree.setup({
 		use_system_clipboard = true,
 		change_dir = {
 			enable = true,
-			global = false,
-			restrict_above_cwd = false,
+			global = true,
+			restrict_above_cwd = true,
 		},
 		open_file = {
-			quit_on_open = false,
+			quit_on_open = true,
 			resize_window = true,
 			window_picker = {
 				enable = true,

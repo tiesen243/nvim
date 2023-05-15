@@ -18,6 +18,9 @@ telescope.setup({
 			},
 		},
 	},
+	picker = {
+		prompt_prefix = "🔍 ",
+	},
 })
 
 vim.cmd([[highlight TelescopeNormal none]])

@@ -64,6 +64,7 @@ km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer" })
 km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
 -- Comment
 km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment" })
+km.set("v", "<C-c>", ":CommentToggle<CR>", { desc = "Comment" })
 -- Increment & Decrement
 km.set("n", "+", "<C-a>", { desc = "Increment" })
 km.set("n", "-", "<C-x>", { desc = "Decrement" })

@@ -20,6 +20,10 @@ mason.setup({
 			package_pending = "➜",
 			package_uninstalled = "✗",
 		},
+		border = "rounded",
+		width = 0.8,
+		height = 0.69,
+		check_outdated_packages_on_open = true,
 	},
 })
 

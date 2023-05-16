@@ -11,7 +11,7 @@ terminal.setup({
 	float_opts = {
 		border = "curved",
 		width = 110,
-		height = 18,
+		height = 30,
 		zindex = 6969,
 		winblend = 0,
 	},

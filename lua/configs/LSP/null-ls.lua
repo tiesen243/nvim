@@ -14,21 +14,18 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 -- configure null_ls
 null_ls.setup({
 	sources = {
-    -- formatting
+		-- formatting
 		formatting.black,
 		formatting.clang_format,
 		formatting.prettier,
 		formatting.stylua,
-    -- Diagnostic
+		-- Diagnostic
 		diagnostics.flake8,
-		diagnostics.cpplint.with({
-      condition = function(utils)
-        return utils.root_has_file(".cpplint")
-      end,
-    }),
-		diagnostics.eslint_d.with({ 
+		-- remove no copyright message
+		diagnostics.cpplint.with({ args = { "--filter=-legal/copyright", "$FILENAME" } }),
+		diagnostics.eslint_d.with({
 			condition = function(utils)
-		  	return utils.root_has_file(".eslintrc.js")
+				return utils.root_has_file(".eslintrc.js")
 			end,
 		}),
 	},

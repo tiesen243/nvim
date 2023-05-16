@@ -18,21 +18,28 @@ tree.setup({
 		highlight_opened_files = "true",
 		icons = {
 			glyphs = {
+				default = "",
+				symlink = "",
+				bookmark = "",
+				modified = "●",
 				folder = {
-					default = "",
-					open = "",
+					arrow_closed = "→",
+					arrow_open = "ↆ",
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
 					symlink = "",
-					arrow_closed = "",
-					arrow_open = "",
+					symlink_open = "",
 				},
 				git = {
-					unstaged = "",
-					staged = "",
+					unstaged = "✗",
+					staged = "✓",
 					unmerged = "",
-					renamed = "",
-					untracked = "",
+					renamed = "➜",
+					untracked = "★",
 					deleted = "",
-					ignored = "",
+					ignored = "◌",
 				},
 			},
 		},
@@ -50,9 +57,28 @@ tree.setup({
 	},
 	view = {
 		cursorline = false,
+		float = {
+			enable = true,
+			quit_on_focus_loss = true,
+			open_win_config = {
+				relative = "editor",
+				border = "rounded",
+				width = 30,
+				height = 20,
+				row = 1,
+				col = 1,
+			},
+		},
 	},
 	diagnostics = {
-		enable = true,
+		enable = false,
+		show_on_dirs = false,
+		show_on_open_dirs = true,
+		debounce_delay = 50,
+		severity = {
+			min = vim.diagnostic.severity.HINT,
+			max = vim.diagnostic.severity.ERROR,
+		},
 		icons = {
 			hint = "",
 			info = "",
@@ -60,6 +86,7 @@ tree.setup({
 			error = "",
 		},
 	},
+
 	actions = {
 		use_system_clipboard = true,
 		change_dir = {

@@ -50,7 +50,7 @@ local mappings = {
 		f = { "<cmd>Telescope find_files<cr>", "Files" },
 		g = { "<cmd>Telescope live_grep<cr>", "Grep" },
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-		o = { "<cmd>Telescope oldfiles<cr>", "Oldfiles" },
+		r = { "<cmd>Telescope oldfiles<cr>", "Recently opened files" },
 	},
 	g = {
 		name = "Git",

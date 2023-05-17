@@ -7,8 +7,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_gitignore = 1
 
-vim.cmd([[ highlight NvimTreeIndentMarker guifg=#5f5faf ]])
-
 tree.setup({
 	hijack_cursor = true,
 	auto_reload_on_write = true,
@@ -23,8 +21,8 @@ tree.setup({
 				bookmark = "",
 				modified = "●",
 				folder = {
-					arrow_closed = "→",
-					arrow_open = "ↆ",
+					arrow_closed = "",
+					arrow_open = "",
 					default = "",
 					open = "",
 					empty = "",
@@ -64,7 +62,7 @@ tree.setup({
 				relative = "editor",
 				border = "rounded",
 				width = 30,
-				height = 20,
+				height = 25,
 				row = 1,
 				col = 1,
 			},

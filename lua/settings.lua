@@ -53,8 +53,12 @@ opt.autowrite = true
 opt.autoread = true
 opt.autochdir = true
 
--- Key Mappings
+-- Global
 g.mapleader = " "
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
+
+-- Key Mappings
 km.set("n", "<C-s>", ":w<CR>", { desc = "Save" })
 km.set("n", "<C-z>", ":undo<CR>", { desc = "Undo" })
 -- Dashboard

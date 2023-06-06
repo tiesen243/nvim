@@ -5,6 +5,15 @@ local km = vim.keymap
 
 -- General
 
+-- Set powershell as shell
+vim.cmd([[ 
+  	let &shell = executable('pwsh') ? 'pwsh -NoLogo' : 'powershell -NoLogo'
+		let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';'
+		let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+		let &shellpipe  = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode'
+		set shellquote= shellxquote=
+]])
+
 -- Line Number
 opt.number = true
 opt.relativenumber = false
@@ -29,9 +38,9 @@ opt.cursorcolumn = false
 
 -- Appearance
 opt.termguicolors = true
-vim.cmd(
-	[[set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor\,sm:block-blinkwait175-blinkoff150-blinkon175]]
-)
+vim.cmd([[
+  set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor\,sm:block-blinkwait175-blinkoff150-blinkon175
+]])
 
 -- Backspace
 opt.backspace = "indent,eol,start"
@@ -68,7 +77,7 @@ km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer" })
 km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
 -- Comment
 km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment" })
-km.set("v", "<C-c>", ":CommentToggle<CR>", { desc = "Comment" })
+km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment" })
 -- Increment & Decrement
 km.set("n", "+", "<C-a>", { desc = "Increment" })
 km.set("n", "-", "<C-x>", { desc = "Decrement" })

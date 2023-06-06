@@ -59,9 +59,6 @@ return packer.startup(function(use)
 	-- Comment
 	use("terrortylor/nvim-comment")
 
-	-- Float Terminal
-	use({ "akinsho/toggleterm.nvim", tag = "*" })
-
 	-- Float Command Line
 	use({
 		"VonHeikemen/fine-cmdline.nvim",
@@ -69,6 +66,7 @@ return packer.startup(function(use)
 			{ "MunifTanjim/nui.nvim" },
 		},
 	})
+	use("stevearc/dressing.nvim")
 
 	-- Colorizer
 	use("NvChad/nvim-colorizer.lua")
@@ -78,6 +76,9 @@ return packer.startup(function(use)
 
 	-- Notify
 	use("rcarriga/nvim-notify")
+
+	-- Toggle term
+	use("akinsho/nvim-toggleterm.lua")
 
 	-- Auto Complete Plugins --
 

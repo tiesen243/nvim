@@ -13,18 +13,8 @@ coderunner.setup({
 		border = "rounded",
 	},
 	filetype = {
-		python = {
-			"cd $dir &&",
-			"py $file",
-		},
-		cpp = {
-			"cd $dir &&",
-			"g++ $fileName -o $fileNameWithoutExt &&",
-			"$dir/$fileNameWithoutExt",
-		},
-		js = {
-			"cd $dir &&",
-			"node $file",
-		},
+		python = { "cd $dir;", "py $file" },
+		cpp = { "cd $dir;", "g++ $fileName -o $fileNameWithoutExt;", "$dir/$fileNameWithoutExt" },
+		js = { "cd $dir;", "node $file" },
 	},
 })

@@ -1,6 +1,11 @@
-local status, fineline = pcall(require, "fine-cmdline")
+local fineline_status, fineline = pcall(require, "fine-cmdline")
 local fn = fineline.fn
-if not status then
+if not fineline_status then
+	return
+end
+
+local dressing_status, dressing = pcall(require, "dressing")
+if not dressing_status then
 	return
 end
 
@@ -33,5 +38,28 @@ fineline.setup({
 			imap("<C-k>", fn.up_search_history)
 			imap("<C-j>", fn.down_search_history)
 		end,
+	},
+})
+
+dressing.setup({
+	input = {
+		title_pos = "center",
+		win_options = {
+			winblend = 0,
+		},
+	},
+	select = {
+		nui = {
+
+			win_options = {
+				winblend = 0,
+			},
+
+			builtin = {
+				win_options = {
+					winblend = 0,
+				},
+			},
+		},
 	},
 })

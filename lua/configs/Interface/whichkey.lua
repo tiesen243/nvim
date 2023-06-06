@@ -3,17 +3,6 @@ if not status then
 	return
 end
 
--- Terminal
-local Terminal = require("toggleterm.terminal").Terminal
-local toggle_lazygit = function()
-	local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
-	return lazygit:toggle()
-end
-local toggle_term = function()
-	local term = Terminal:new({ cmd = "powershell -NoLogo", direction = "float" })
-	return term:toggle()
-end
-
 -- Git
 local commit = function()
 	local mess = vim.fn.input("Commit message: ")
@@ -40,11 +29,7 @@ local mappings = {
 	q = { "<cmd>wqa<cr>", "Save and Quit" },
 	e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	r = { "<cmd>RunCode<cr>", "Run Code" },
-	t = {
-		name = "Terminal",
-		t = { toggle_term, "Toggle Terminal" },
-		l = { toggle_lazygit, "Toggle Lazygit" },
-	},
+	t = { "<cmd>ToggleTerm<cr>", "Terminal" },
 	f = {
 		name = "Fuzzy Finder",
 		f = { "<cmd>Telescope find_files<cr>", "Files" },
@@ -82,15 +67,13 @@ local mappings = {
 		},
 		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 		a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
-		d = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Diagnostics" },
-		d = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "Diagnostics" },
 		k = { "<cmd>Lspsaga hover_doc<cr>", "Hover Doc" },
 		o = { "<cmd>LSoutlineToggle<cr>", "Out Line Toggle" },
 	},
 }
 
 local opts = {
-	mode = "n",
+	mode = { "n" },
 	prefix = " ",
 	buffer = nil,
 	silent = true,

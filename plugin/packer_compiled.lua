@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   ["fine-cmdline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fine-cmdline.nvim",
@@ -214,6 +219,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
   },
+  ["nvim-toggleterm.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-toggleterm.lua",
+    url = "https://github.com/akinsho/nvim-toggleterm.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
@@ -253,11 +263,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\ttien\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["transparent.nvim"] = {
     loaded = true,

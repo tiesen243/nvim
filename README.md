@@ -1,15 +1,14 @@
 # My Neovim Config
 
-![1683780204630](https://github.com/Tiesen226/nvim/assets/101703006/08966af0-34f2-406f-a564-628ad47f6ecd)
+![image](https://github.com/tiesen243/nvim/assets/101703006/2113d58e-ddfd-4a1f-8c00-ca770527bc0b)
 
 **Requiment**<br/>
 
-1. Nodejs: `npm i -g neovim`
-2. Python: install package with pip: `neovim, black, flake8, cpplint, clang-format`
-3. C/C++: install `gcc conpile` with mingw64, `clang` with visual studio installer
-4. Install packer at [here](https://github.com/wbthomason/packer.nvim)
-5. Nerdfont to dislay file icon
-6. Set opacity of your terminal to use transparent background
+1. Python: install package with pip: `neovim, black, flake8, cpplint, clang-format`
+2. C/C++: install `gcc conpile` with mingw64, `clang` with visual studio installer
+3. Install packer at [here](https://github.com/wbthomason/packer.nvim)
+4. Nerdfont to dislay file icon
+5. Set opacity of your terminal to use transparent background
 
 **Try my config**<br/>
 

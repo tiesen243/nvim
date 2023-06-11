@@ -30,6 +30,7 @@ local mappings = {
 	e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	r = { "<cmd>RunCode<cr>", "Run Code" },
 	t = { "<cmd>ToggleTerm<cr>", "Terminal" },
+	b = { name = "Bufferline" },
 	f = {
 		name = "Fuzzy Finder",
 		f = { "<cmd>Telescope find_files<cr>", "Files" },
@@ -68,7 +69,6 @@ local mappings = {
 		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 		a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
 		k = { "<cmd>Lspsaga hover_doc<cr>", "Hover Doc" },
-		o = { "<cmd>LSoutlineToggle<cr>", "Out Line Toggle" },
 	},
 }
 

@@ -68,21 +68,26 @@ g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 
 -- Key Mappings
-km.set("n", "<C-s>", ":w<CR>", { desc = "Save" })
-km.set("n", "<C-z>", ":undo<CR>", { desc = "Undo" })
+km.set("n", "<C-s>", ":w<CR>", { desc = "Save", silent = true })
+km.set("n", "<C-z>", ":undo<CR>", { desc = "Undo", silent = true })
 -- Dashboard
-km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard" })
+km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard", silent = true })
 -- Buffer
-km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+km.set("n", "<leader>b]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer", silent = true })
+km.set("n", "<leader>b[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer", silent = true })
+km.set("n", "<leader>b}", ":BufferLineCloseRight<CR>", { desc = "Close Buffer Right", silent = true })
+km.set("n", "<leader>b{", ":BufferLineCloseLeft<CR>", { desc = "Close Buffer Left", silent = true })
+km.set("n", "<leader>bp", ":BufferLinePickClose<CR>", { desc = "Pick Close Buffer", silent = true })
 -- Comment
-km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment" })
-km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment" })
+km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment", silent = true })
+km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment", silent = true })
 -- Increment & Decrement
 km.set("n", "+", "<C-a>", { desc = "Increment" })
 km.set("n", "-", "<C-x>", { desc = "Decrement" })
 -- Select All
 km.set("n", "<C-a>", "ggVG", { desc = "Select All" })
+-- Exit Search
+km.set("n", "<Esc>", ":noh<CR>", { desc = "Exit Search", silent = true })
 
 -- Notify
 local notify = vim.notify

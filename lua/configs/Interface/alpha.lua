@@ -16,7 +16,7 @@ dashboard.section.header.val = {
 	[[    ██║   ██║███████╗██████║███████╗██║ ╚████║]],
 	[[    ╚═╝   ╚═╝╚══════╝╚═════╝╚══════╝╚═╝  ╚═══╝]],
 	[[                                              ]],
-	[[                    @Tiesen226                ]],
+	[[                    @tiesen243                ]],
 }
 
 dashboard.section.buttons.val = {

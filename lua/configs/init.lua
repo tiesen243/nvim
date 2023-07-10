@@ -25,7 +25,6 @@ require("configs.LSP.mason")
 require("configs.LSP.lspconfig")
 require("configs.LSP.lspsaga")
 require("configs.LSP.null-ls")
-require("configs.LSP.inlayhints")
 
 -- Git
 require("configs.Git.gitsigns")

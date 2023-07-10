@@ -27,9 +27,6 @@ local on_attach = function(client, bufnr)
 	km.set("n", "<leader>lK", "<cmd>Lspsaga hover_doc<CR>", opts)
 
 	km.set("n", "<leader>lo", "<cmd>LSoutlineToggle<CR>", opts)
-
-	local ih = require("inlay_hints")
-	ih.on_attach(client, bufnr)
 end
 
 -- Enable auto completion
@@ -60,32 +57,6 @@ lspconfig["tsserver"].setup({
 				}
 				vim.lsp.buf.execute_command(params)
 			end,
-		},
-	},
-	settings = {
-		typescript = {
-			inlayHints = {
-				includeInlayParameterNameHints = "all",
-				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-				includeInlayFunctionParameterTypeHints = true,
-				includeInlayVariableTypeHints = true,
-				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-				includeInlayPropertyDeclarationTypeHints = true,
-				includeInlayFunctionLikeReturnTypeHints = true,
-				includeInlayEnumMemberValueHints = true,
-			},
-		},
-		javascript = {
-			inlayHints = {
-				includeInlayParameterNameHints = "all",
-				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-				includeInlayFunctionParameterTypeHints = true,
-				includeInlayVariableTypeHints = true,
-				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-				includeInlayPropertyDeclarationTypeHints = true,
-				includeInlayFunctionLikeReturnTypeHints = true,
-				includeInlayEnumMemberValueHints = true,
-			},
 		},
 	},
 })

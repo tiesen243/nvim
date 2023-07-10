@@ -110,7 +110,6 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("onsails/lspkind-nvim")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use("simrat39/inlay-hints.nvim")
 
 	-- Highlight Syntax
 	use("nvim-treesitter/nvim-treesitter")

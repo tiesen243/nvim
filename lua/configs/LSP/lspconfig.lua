@@ -28,9 +28,8 @@ local on_attach = function(client, bufnr)
 
 	km.set("n", "<leader>lo", "<cmd>LSoutlineToggle<CR>", opts)
 
-	if client.name == "tsserver" then
-		km.set("n", "<leader>lrt", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	end
+	local ih = require("inlay_hints")
+	ih.on_attach(client, bufnr)
 end
 
 -- Enable auto completion
@@ -48,6 +47,49 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["tsserver"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	commands = {
+		OrganizeImports = {
+			function()
+				local params = {
+					command = "_typescript.organizeImports",
+					arguments = { vim.api.nvim_buf_get_name(0) },
+					title = "Organize Imports",
+				}
+				vim.lsp.buf.execute_command(params)
+			end,
+		},
+	},
+	settings = {
+		typescript = {
+			inlayHints = {
+				includeInlayParameterNameHints = "all",
+				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+				includeInlayFunctionParameterTypeHints = true,
+				includeInlayVariableTypeHints = true,
+				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+				includeInlayPropertyDeclarationTypeHints = true,
+				includeInlayFunctionLikeReturnTypeHints = true,
+				includeInlayEnumMemberValueHints = true,
+			},
+		},
+		javascript = {
+			inlayHints = {
+				includeInlayParameterNameHints = "all",
+				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+				includeInlayFunctionParameterTypeHints = true,
+				includeInlayVariableTypeHints = true,
+				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+				includeInlayPropertyDeclarationTypeHints = true,
+				includeInlayFunctionLikeReturnTypeHints = true,
+				includeInlayEnumMemberValueHints = true,
+			},
+		},
+	},
+})
+
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -56,7 +98,7 @@ lspconfig["tailwindcss"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
+	filetypes = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "pug" },
 	init_options = {
 		documentFormatting = true,
 		["bem.enabled"] = true,

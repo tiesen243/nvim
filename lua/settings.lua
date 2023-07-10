@@ -77,7 +77,8 @@ km.set("n", "<leader>b]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer", si
 km.set("n", "<leader>b[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer", silent = true })
 km.set("n", "<leader>b}", ":BufferLineCloseRight<CR>", { desc = "Close Buffer Right", silent = true })
 km.set("n", "<leader>b{", ":BufferLineCloseLeft<CR>", { desc = "Close Buffer Left", silent = true })
-km.set("n", "<leader>bp", ":BufferLinePickClose<CR>", { desc = "Pick Close Buffer", silent = true })
+km.set("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Pick Buffer", silent = true })
+km.set("n", "<leader>bP", ":BufferLinePickClose<CR>", { desc = "Pick Close Buffer", silent = true })
 -- Comment
 km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment", silent = true })
 km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment", silent = true })

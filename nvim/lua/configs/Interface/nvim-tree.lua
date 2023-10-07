@@ -13,7 +13,6 @@ tree.setup({
 	renderer = {
 		special_files = { "README.md", "readme.md", ".git" },
 		highlight_git = true,
-		highlight_opened_files = "true",
 		icons = {
 			glyphs = {
 				default = "",

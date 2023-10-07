@@ -31,7 +31,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Cursor Line
-opt.cursorline = false
+opt.cursorline = true
 opt.cursorcolumn = false
 
 -- Appearance

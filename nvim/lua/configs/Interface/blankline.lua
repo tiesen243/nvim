@@ -1,16 +1,8 @@
-local status_bl, blankline = pcall(require, "indent_blankline")
-if not status_bl then
+local status_ibl, ibl = pcall(require, "ibl")
+if not status_ibl then
 	return
 end
 
 vim.opt.list = true
-vim.g.indent_blankline_show_current_context = true
-vim.cmd([[highlight IndentBlanklineContextChar guifg=#ffffff gui=nocombine]])
 
-blankline.setup({
-	space_char_blankline = " ",
-	show_current_context = true,
-	show_current_context_start = true,
-	show_end_of_line = true,
-	filetype_exclude = { "alpha", "packer", "NvimTree", "mason", "help" },
-})
+ibl.setup()

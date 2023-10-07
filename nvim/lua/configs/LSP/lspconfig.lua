@@ -67,6 +67,12 @@ lspconfig["pyright"].setup({
 	on_attach = on_attach,
 })
 
+-- C/C++
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- Lua
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,

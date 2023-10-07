@@ -16,6 +16,7 @@ null_ls.setup({
 	sources = {
 		-- formatting
 		formatting.black,
+		formatting.clang_format,
 		formatting.prettier,
 		formatting.stylua,
 		-- Diagnostic

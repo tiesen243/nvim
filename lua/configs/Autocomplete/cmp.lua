@@ -7,6 +7,7 @@ local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
 	return
 end
+
 local lspkind_status, lspkind = pcall(require, "lspkind")
 if not lspkind_status then
 	return
@@ -14,6 +15,11 @@ end
 
 -- Load friendly-snippets
 require("luasnip/loaders/from_vscode").lazy_load()
+
+local check_backspace = function()
+	local col = vim.fn.col(".") - 1
+	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
+end
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -35,6 +41,9 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
+		["<C-e>"] = cmp.mapping.close(),
+		["<C-k>"] = cmp.mapping.scroll_docs(-4),
+		["<C-j>"] = cmp.mapping.scroll_docs(4),
 	},
 
 	sources = {

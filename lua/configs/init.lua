@@ -23,7 +23,6 @@ require("configs.Autocomplete.comment")
 require("configs.Autocomplete.copilot")
 
 -- LSP
-require("configs.LSP.coderunner")
 require("configs.LSP.lspconfig")
 require("configs.LSP.lspsaga")
 require("configs.LSP.mason")

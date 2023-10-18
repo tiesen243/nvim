@@ -81,15 +81,12 @@ return packer.startup(function(use)
 	-- Git Signs --
 	use("lewis6991/gitsigns.nvim")
 
-	-- Code Runner
-	use("CRAG666/code_runner.nvim")
-
-	-- Auto Complete Plugins --
-
 	-- CMP
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("onsails/lspkind-nvim")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
@@ -103,8 +100,6 @@ return packer.startup(function(use)
 	-- Copilot
 	use("github/copilot.vim")
 
-	-- Language Server Configuration --
-
 	-- Language Server Protocol
 	use({
 		"williamboman/mason.nvim",
@@ -113,8 +108,7 @@ return packer.startup(function(use)
 	})
 
 	-- LSP Config
-	use("hrsh7th/cmp-nvim-lsp")
-	use("onsails/lspkind-nvim")
+
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	-- Formatting & Linting

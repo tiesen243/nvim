@@ -8,18 +8,12 @@ if not mason_lspconfig_status then
 	return
 end
 
-local lsp_installer_status, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not lsp_installer_status then
-	return
-end
-
 local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status then
 	return
 end
 
 mason.setup({
-	PATH = "prepend",
 	ui = {
 		icons = {
 			package_installed = "✓",
@@ -33,16 +27,6 @@ mason.setup({
 	},
 })
 
-lsp_installer.setup({
-	automatic_installation = true,
-	ui = {
-		icons = {
-			server_installed = "✓",
-			server_pending = "➜",
-			server_uninstalled = "✗",
-		},
-	},
-})
 mason_lspconfig.setup({
 	ensure_installed = {
 		-- Lua

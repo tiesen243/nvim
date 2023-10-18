@@ -3,7 +3,11 @@ if not saga_status then
 	return
 end
 
-saga.setup()
+saga.setup({
+	terminal = {
+		cmd = "alacritty",
+	},
+})
 
 local opts = { noremap = true, silent = true }
 local km = vim.keymap

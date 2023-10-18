@@ -40,7 +40,8 @@ return packer.startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "*" })
 
 	-- Highlight Syntax
-	use("nvim-treesitter/nvim-treesitter")
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("p00f/nvim-ts-rainbow")
 
 	-- Dashboard
 	use("goolord/alpha-nvim")

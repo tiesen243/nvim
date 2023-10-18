@@ -38,7 +38,7 @@ opt.cursorcolumn = false
 opt.termguicolors = true
 opt.syntax = "enable"
 opt.title = true
-opt.wrap = false
+opt.wrap = true
 vim.cmd([[
   set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor\,sm:block-blinkwait175-blinkoff150-blinkon175
 ]])
@@ -61,7 +61,7 @@ opt.mousemoveevent = true
 -- Auto
 opt.autowrite = true
 opt.autoread = true
-opt.autochdir = true
+opt.autochdir = false
 
 -- Global
 g.mapleader = " "

@@ -18,11 +18,6 @@ cmp_nvim_lsp.setup({ capabilities = capabilities })
 -- Enable the following language servers
 
 -- Web
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

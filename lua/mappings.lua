@@ -49,14 +49,3 @@ km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment", silent =
 -- Increment & Decrement
 km.set("n", "+", "<C-a>", { desc = "Increment" })
 km.set("n", "-", "<C-x>", { desc = "Decrement" })
-
--- Debugging
-km.set("n", "<leader>dt", "<cmd>DapUiToggle<CR>", { desc = "Toggle Dap UI", silent = true, noremap = true })
-km.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { desc = "Toggle Breakpoint", silent = true, noremap = true })
-km.set("n", "<leader>dc", "<cmd>DapContinue<CR>", { desc = "Continue", silent = true, noremap = true })
-km.set(
-	"n",
-	"<leader>dr",
-	"<cmd>lua require('dap-ui').open({reset = true})<CR>",
-	{ desc = "Restart", silent = true, noremap = true }
-)

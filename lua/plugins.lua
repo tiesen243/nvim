@@ -96,19 +96,21 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- Copilot
-	use("github/copilot.vim")
-
-	-- Auto Close
+	-- Autopairs
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+
+	-- Copilot
+	use("github/copilot.vim")
 
 	-- Language Server Configuration --
 
 	-- Language Server Protocol
-	use("neovim/nvim-lspconfig")
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig")
+	use({
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	})
 
 	-- LSP Config
 	use("hrsh7th/cmp-nvim-lsp")

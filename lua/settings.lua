@@ -61,7 +61,7 @@ opt.mousemoveevent = true
 -- Auto
 opt.autowrite = true
 opt.autoread = true
-opt.autochdir = false
+opt.autochdir = true
 
 -- Global
 g.mapleader = " "

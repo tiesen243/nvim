@@ -1,7 +1,5 @@
 # My Neovim Config
 
-![image](https://github.com/tiesen243/nvim/assets/101703006/2113d58e-ddfd-4a1f-8c00-ca770527bc0b)
-
 **Requiment**<br/>
 
 1. Install packer at [here](https://github.com/wbthomason/packer.nvim)

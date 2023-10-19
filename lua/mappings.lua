@@ -8,7 +8,7 @@ end
 
 -- Basic
 km.set("n", "x", '"_x', { desc = "Delete without yanking" })
-km.set("n", "s", ":w<CR>", { desc = "Save", silent = true })
+km.set("n", "s", ":w!<CR>", { desc = "Save", silent = true })
 km.set("n", "z", ":undo<CR>", { desc = "Undo", silent = true })
 km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard", silent = true })
 km.set("n", "<Esc>", ":noh<CR>", { desc = "Exit Search", silent = true })

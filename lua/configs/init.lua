@@ -17,7 +17,6 @@ require("configs.Interface.whichkey")
 
 -- Autocomplete
 require("configs.Autocomplete.autopairs")
-require("configs.Autocomplete.autotags")
 require("configs.Autocomplete.cmp")
 require("configs.Autocomplete.comment")
 require("configs.Autocomplete.copilot")

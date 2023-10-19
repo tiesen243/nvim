@@ -10,6 +10,10 @@ local servers = { "cssls", "tsserver", "tailwindcss", "emmet_ls", "pyright", "cl
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		capabilities = capabilities,
+		init_options = {
+			documentFormatting = true,
+		},
+
 		commands = {
 			OrganizeImports = {
 				function()

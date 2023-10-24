@@ -3,38 +3,26 @@ if not lspconfig_status then
 	return
 end
 
-local protocol_status, protocol = pcall(require, "vim.lsp.protocol")
-if not protocol_status then
+local cmp_nvim_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_status then
 	return
 end
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = cmp_nvim_lsp.default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-require("cmp_nvim_lsp").setup({ capabilities = capabilities })
-
-local on_attach = function(client)
-	client.resolved_capabilities.document_formatting = true
-	client.resolved_capabilities.document_range_formatting = true
-end
+cmp_nvim_lsp.setup({ capabilities = capabilities })
 
 -- Enable the following language servers
-local servers = { "cssls", "emmet_ls", "pyright", "clangd" }
+local servers = { "cssls", "tailwindcss", "emmet_ls", "pyright", "clangd" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		capabilities = capabilities,
-		on_attach = on_attach,
 	})
 end
 
-lspconfig.tailwindcss.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
-	on_attach = on_attach,
-	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	cmd = { "typescript-language-server", "--stdio" },
 	commands = {
 		OrganizeImports = {
@@ -42,7 +30,7 @@ lspconfig.tsserver.setup({
 				local params = {
 					command = "_typescript.organizeImports",
 					arguments = { vim.api.nvim_buf_get_name(0) },
-					title = "Organize Imports",
+					title = "",
 				}
 				vim.lsp.buf.execute_command(params)
 			end,
@@ -51,7 +39,6 @@ lspconfig.tsserver.setup({
 })
 
 lspconfig.lua_ls.setup({
-	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
 		Lua = {
@@ -68,36 +55,8 @@ lspconfig.lua_ls.setup({
 	},
 })
 
-protocol.CompletionItemKind = {
-	"", -- Text
-	"", -- Method
-	"", -- Function
-	"", -- Constructor
-	"", -- Field
-	"", -- Variable
-	"", -- Class
-	"ﰮ", -- Interface
-	"", -- Module
-	"", -- Property
-	"", -- Unit
-	"", -- Value
-	"", -- Enum
-	"", -- Keyword
-	"﬌", -- Snippet
-	"", -- Color
-	"", -- File
-	"", -- Reference
-	"", -- Folder
-	"", -- EnumMember
-	"", -- Constant
-	"", -- Struct
-	"", -- Event
-	"ﬦ", -- Operator
-	"", -- TypeParameter
-}
-
 -- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })

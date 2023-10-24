@@ -41,7 +41,6 @@ return packer.startup(function(use)
 
 	-- Highlight Syntax
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("p00f/nvim-ts-rainbow")
 
 	-- Dashboard
 	use("goolord/alpha-nvim")

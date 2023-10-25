@@ -13,7 +13,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 cmp_nvim_lsp.setup({ capabilities = capabilities })
 
 -- Enable the following language servers
-local servers = { "cssls", "tailwindcss", "emmet_ls", "pyright", "clangd" }
+local servers = { "tailwindcss", "emmet_ls", "pyright", "clangd" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		capabilities = capabilities,
@@ -36,6 +36,11 @@ lspconfig.tsserver.setup({
 			end,
 		},
 	},
+})
+
+lspconfig.cssls.setup({
+	capabilities = capabilities,
+	settings = { css = { validate = true, lint = { unknownAtRules = "ignore" } } },
 })
 
 lspconfig.lua_ls.setup({

@@ -41,6 +41,8 @@ return packer.startup(function(use)
 
 	-- Highlight Syntax
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
 
 	-- Dashboard
 	use("goolord/alpha-nvim")
@@ -93,8 +95,6 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets")
 
 	-- Autopairs
-	use("windwp/nvim-autopairs")
-	use("windwp/nvim-ts-autotag")
 
 	-- Copilot
 	use("github/copilot.vim")
@@ -105,10 +105,7 @@ return packer.startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
-
-	-- LSP Config
-
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({ "glepnir/lspsaga.nvim" })
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim")

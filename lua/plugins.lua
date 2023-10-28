@@ -78,9 +78,6 @@ return packer.startup(function(use)
 	-- Jump
 	use("nacro90/numb.nvim")
 
-	-- Auto Save
-	use("Pocco81/AutoSave.nvim")
-
 	-- Search and replace
 	use("windwp/nvim-spectre")
 
@@ -124,7 +121,6 @@ return packer.startup(function(use)
 
 	-- Copilot
 	use("github/copilot.vim")
-	use("zbirenbaum/copilot-cmp")
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim")

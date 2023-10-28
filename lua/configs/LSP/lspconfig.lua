@@ -33,7 +33,7 @@ signature.setup({
 	max_width = 120,
 	handler_opts = { border = "rounded" },
 	extra_trigger_chars = {},
-	zindex = 200, -- by default it will be on top of all floating windows, set to 50 send it to bottom
+	zindex = 200,
 })
 
 -- Enable the following language servers

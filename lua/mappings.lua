@@ -14,7 +14,7 @@ end
 km.set("n", "x", '"_x', opts("Delete char"))
 km.set("n", "<C-s>", ":w!<CR>", opts("Save"))
 km.set("n", "<C-z>", ":undo<CR>", opts("Undo"))
-km.set("n", "<leader>;", ":Alpha<CR>", opts("Alpha"))
+km.set("n", "<leader>;", ":Alpha<CR>", opts("Dashboard"))
 km.set("n", "<Esc>", ":noh<CR>", opts("Escape search highlight"))
 
 -- Delete word backward

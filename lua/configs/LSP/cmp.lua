@@ -43,6 +43,7 @@ cmp.setup({
 
 	sources = {
 		{ name = "nvim_lsp" },
+		{ name = "copilot" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
@@ -56,7 +57,7 @@ cmp.setup({
 })
 
 lspkind.init({
-	mode = "symbol_text",
+	mode = "symbol",
 	preset = "codicons",
 	symbol_map = {
 		Text = "󰉿",
@@ -84,6 +85,7 @@ lspkind.init({
 		Event = "",
 		Operator = "󰆕",
 		TypeParameter = "",
+		Copilot = "",
 	},
 })
 

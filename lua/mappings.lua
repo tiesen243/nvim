@@ -53,6 +53,11 @@ km.set("n", "<leader>hc", ":HopChar1<CR>", opts("Hop Char"))
 km.set("n", "<leader>hC", ":HopChar2<CR>", opts("Hop Char 2"))
 km.set("n", "<leader>hp", ":HopPattern<CR>", opts("Hop Pattern"))
 
+-- Git
+km.set("n", "<leader>gb", ":GitBlameToggle<CR>", opts("Git Blame Toggle"))
+km.set("n", "<leader>go", ":DiffviewOpen<CR>", opts("Git Diff"))
+km.set("n", "<leader>gc", ":DiffviewClose<CR>", opts("Git Diff Close"))
+
 -- Increment & Decrement
 km.set("n", "=", "<C-a>", opts("Increment"))
 km.set("n", "-", "<C-x>", opts("Decrement"))

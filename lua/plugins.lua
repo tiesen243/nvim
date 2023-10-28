@@ -76,48 +76,29 @@ return packer.startup(function(use)
 	use("ggandor/lightspeed.nvim")
 
 	-- Jump
-	use({
-		"nacro90/numb.nvim",
-		event = "BufRead",
-	})
+	use("nacro90/numb.nvim")
+
+	-- Auto Save
+	use("Pocco81/AutoSave.nvim")
 
 	-- Search and replace
-	use({
-		"windwp/nvim-spectre",
-		event = "BufRead",
-	})
+	use("windwp/nvim-spectre")
 
 	-- Git Plugins --
 
 	use("lewis6991/gitsigns.nvim")
-	use({
-		"sindrets/diffview.nvim",
-		event = "BufRead",
-	})
-	use({
-		"f-person/git-blame.nvim",
-		event = "BufRead",
-		config = function()
-			vim.cmd("highlight default link gitblame SpecialComment")
-			require("gitblame").setup({ enabled = false })
-		end,
-	})
+	use("sindrets/diffview.nvim")
+	use("f-person/git-blame.nvim")
 
-	-- Treesitter
+	-- Treesitter Plugins --
 
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	})
+	use({ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" })
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
-
-	-- Comment
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-
-	-- Match-up
 	use("andymass/vim-matchup")
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- Language Server Protocol --
 
@@ -126,6 +107,7 @@ return packer.startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 		"glepnir/lspsaga.nvim",
+		"ray-x/lsp_signature.nvim",
 	})
 
 	-- CMP
@@ -142,6 +124,7 @@ return packer.startup(function(use)
 
 	-- Copilot
 	use("github/copilot.vim")
+	use("zbirenbaum/copilot-cmp")
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim")

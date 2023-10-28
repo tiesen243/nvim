@@ -6,46 +6,53 @@ local lazygit = function()
 	lazygit:toggle()
 end
 
+local opts = function(desc)
+	return { noremap = true, silent = true, expr = false, nowait = false, desc = desc }
+end
+
 -- Basic
-km.set("n", "x", '"_x', { desc = "Delete without yanking" })
-km.set("n", "s", ":w!<CR>", { desc = "Save", silent = true })
-km.set("n", "z", ":undo<CR>", { desc = "Undo", silent = true })
-km.set("n", "<leader>;", ":Alpha<CR>", { desc = "Dashboard", silent = true })
-km.set("n", "<Esc>", ":noh<CR>", { desc = "Exit Search", silent = true })
+km.set("n", "x", '"_x', opts("Delete char"))
+km.set("n", "<C-s>", ":w!<CR>", opts("Save"))
+km.set("n", "<C-z>", ":undo<CR>", opts("Undo"))
+km.set("n", "<leader>;", ":Alpha<CR>", opts("Alpha"))
+km.set("n", "<Esc>", ":noh<CR>", opts("Escape search highlight"))
 
 -- Delete word backward
-km.set("n", "dw", 'vb"_d', { desc = "Delete Word Backward" })
+km.set("n", "dw", 'vb"_d', opts("Delete word backward"))
 
 -- Select all
-km.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
+km.set("n", "<C-a>", "gg<S-v>G", opts("Select all"))
 
 -- Split window
-km.set("n", "<leader>ss", ":split<return><C-w>w", { desc = "Split", silent = true })
-km.set("n", "<leader>sv", ":vsplit<return><C-w>w", { desc = "Vsplit", silent = true })
+km.set("n", "<leader>ss", ":split<return><C-w>w", opts("Split"))
+km.set("n", "<leader>sv", ":vsplit<return><C-w>w", opts("Vsplit"))
 
 -- Bufferline
-km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { desc = "Next Buffer", silent = true })
-km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { desc = "Prev Buffer", silent = true })
-km.set("n", "<leader>b}", ":BufferLineCloseRight<CR>", { desc = "Close Buffer Right", silent = true })
-km.set("n", "<leader>b{", ":BufferLineCloseLeft<CR>", { desc = "Close Buffer Left", silent = true })
-km.set("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Pick Buffer", silent = true })
-km.set("n", "<leader>bP", ":BufferLinePickClose<CR>", { desc = "Pick Close Buffer", silent = true })
+km.set("n", "<leader>]", ":BufferLineCycleNext<CR>", opts("Next Buffer"))
+km.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", opts("Prev Buffer"))
+km.set("n", "<leader>b}", ":BufferLineCloseRight<CR>", opts("Close Buffer Right"))
+km.set("n", "<leader>b{", ":BufferLineCloseLeft<CR>", opts("Close Buffer Left"))
+km.set("n", "<leader>bp", ":BufferLinePick<CR>", opts("Pick Buffer"))
+km.set("n", "<leader>bP", ":BufferLinePickClose<CR>", opts("Pick Buffer and Close"))
 
 -- Terminal
-km.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal", silent = true })
-km.set("n", "<leader>tg", lazygit, { desc = "Lazygit", silent = true })
+km.set("n", "<leader>tt", ":ToggleTerm<CR>", opts("Toggle Terminal"))
+km.set("n", "<leader>tg", lazygit, opts("Lazygit"))
 
 -- Fuzzy Finder
-km.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find Files", silent = true })
-km.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Grep", silent = true })
-km.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers", silent = true })
-km.set("n", "<leader>fr", ":Telescope oldfiles<CR>", { desc = "Recently opened files", silent = true })
-km.set("n", "<leader>fe", ":Telescope file_browser<CR>", { desc = "File Browser", silent = true })
+km.set("n", "<leader>ff", ":Telescope find_files<CR>", opts("Find Files"))
+km.set("n", "<leader>fg", ":Telescope live_grep<CR>", opts("Live Grep"))
+km.set("n", "<leader>fb", ":Telescope buffers<CR>", opts("Find Buffers"))
+km.set("n", "<leader>fr", ":Telescope oldfiles<CR>", opts("Find Recent Files"))
+km.set("n", "<leader>fe", ":Telescope file_browser<CR>", opts("File Browser"))
 
--- Comment
-km.set("n", "<leader>/", ":CommentToggle<CR>", { desc = "Comment", silent = true })
-km.set("v", "<leader>/", ":'<,'>CommentToggle<CR>", { desc = "Comment", silent = true })
+-- Hop
+km.set("n", "<leader>hw", ":HopWord<CR>", opts("Hop Word"))
+km.set("n", "<leader>hl", ":HopLine<CR>", opts("Hop Line"))
+km.set("n", "<leader>hc", ":HopChar1<CR>", opts("Hop Char"))
+km.set("n", "<leader>hC", ":HopChar2<CR>", opts("Hop Char 2"))
+km.set("n", "<leader>hp", ":HopPattern<CR>", opts("Hop Pattern"))
 
 -- Increment & Decrement
-km.set("n", "+", "<C-a>", { desc = "Increment" })
-km.set("n", "-", "<C-x>", { desc = "Decrement" })
+km.set("n", "=", "<C-a>", opts("Increment"))
+km.set("n", "-", "<C-x>", opts("Decrement"))

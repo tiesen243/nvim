@@ -38,11 +38,10 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "*" })
+	use("lukas-reineke/indent-blankline.nvim")
 
-	-- Highlight Syntax
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("windwp/nvim-autopairs")
-	use("windwp/nvim-ts-autotag")
+	-- Colorizer
+	use("NvChad/nvim-colorizer.lua")
 
 	-- Dashboard
 	use("goolord/alpha-nvim")
@@ -51,27 +50,18 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 
 	-- Telescope
-	use("nvim-telescope/telescope.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
 
 	-- Tmux Navigator
 	use("christoomey/vim-tmux-navigator")
 
-	-- Comment
-	use("terrortylor/nvim-comment")
-
 	-- Float Command Line
 	use("VonHeikemen/fine-cmdline.nvim")
 	use("MunifTanjim/nui.nvim")
 	use("stevearc/dressing.nvim")
-
-	-- Colorizer
-	use("NvChad/nvim-colorizer.lua")
-
-	-- Indent Blankline
-	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Notify
 	use("rcarriga/nvim-notify")
@@ -79,8 +69,64 @@ return packer.startup(function(use)
 	-- Toggle term
 	use("akinsho/nvim-toggleterm.lua")
 
-	-- Git Signs --
+	-- Hop
+	use({ "phaazon/hop.nvim", branch = "v2" })
+
+	-- Lightspeed
+	use("ggandor/lightspeed.nvim")
+
+	-- Jump
+	use({
+		"nacro90/numb.nvim",
+		event = "BufRead",
+	})
+
+	-- Search and replace
+	use({
+		"windwp/nvim-spectre",
+		event = "BufRead",
+	})
+
+	-- Git Plugins --
+
 	use("lewis6991/gitsigns.nvim")
+	use({
+		"sindrets/diffview.nvim",
+		event = "BufRead",
+	})
+	use({
+		"f-person/git-blame.nvim",
+		event = "BufRead",
+		config = function()
+			vim.cmd("highlight default link gitblame SpecialComment")
+			require("gitblame").setup({ enabled = false })
+		end,
+	})
+
+	-- Treesitter
+
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+	})
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+
+	-- Comment
+	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	-- Match-up
+	use("andymass/vim-matchup")
+
+	-- Language Server Protocol --
+
+	use({
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+		"glepnir/lspsaga.nvim",
+	})
 
 	-- CMP
 	use("hrsh7th/nvim-cmp")
@@ -94,18 +140,8 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- Autopairs
-
 	-- Copilot
 	use("github/copilot.vim")
-
-	-- Language Server Protocol
-	use({
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	})
-	use({ "glepnir/lspsaga.nvim" })
 
 	-- Formatting & Linting
 	use("jose-elias-alvarez/null-ls.nvim")

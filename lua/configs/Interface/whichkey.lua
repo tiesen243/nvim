@@ -9,10 +9,11 @@ local mappings = {
 	r = { "<cmd>RunCode<cr>", "Code Runner" },
 	t = { name = "Terminal" },
 	b = { name = "Bufferline" },
-	c = { "<cmd>Copilot panel<cr>", "Copilot Panel" },
 	l = { name = "LSP" },
 	s = { name = "Split" },
+	S = { "<cmd>Spectre<cr>", "Spectre" },
 	f = { name = "Fuzzy Finder" },
+	h = { name = "Hop" },
 	o = {
 		name = "Options",
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },

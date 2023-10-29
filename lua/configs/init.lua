@@ -27,7 +27,6 @@ require("configs.LSP.copilot")
 require("configs.Treesitter.treesitter")
 require("configs.Treesitter.autopairs")
 require("configs.Treesitter.comment")
-require("configs.Treesitter.context")
 
 -- Git
 require("configs.Git.gitblame")

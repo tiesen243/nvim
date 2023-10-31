@@ -80,21 +80,22 @@ return packer.startup(function(use)
 
 	-- Search and replace
 	use("windwp/nvim-spectre")
+	use("tpope/vim-surround")
 
 	-- Git Plugins --
 
 	use("lewis6991/gitsigns.nvim")
 	use("sindrets/diffview.nvim")
-	use("f-person/git-blame.nvim")
 
 	-- Treesitter Plugins --
 
 	use({ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" })
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+
+	-- Comment
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("andymass/vim-matchup")
 
 	-- Language Server Protocol --
 

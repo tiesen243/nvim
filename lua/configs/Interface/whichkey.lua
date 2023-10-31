@@ -18,7 +18,7 @@ local mappings = {
 	},
 	q = { "<cmd>wqa<cr>", "Save and Quit" },
 	s = { name = "Split" },
-	S = { "<cmd>Spectre<cr>", "Spectre" },
+	S = { name = "Spectre" },
 	t = { name = "Terminal" },
 }
 

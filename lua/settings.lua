@@ -30,7 +30,7 @@ opt.smarttab = true
 opt.ignorecase = true
 opt.smartcase = true
 
--- Cursor Line
+-- Cursor Background
 opt.cursorline = true
 opt.cursorcolumn = false
 

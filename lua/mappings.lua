@@ -53,8 +53,23 @@ km.set("n", "<leader>hc", ":HopChar1<CR>", opts("Hop Char"))
 km.set("n", "<leader>hC", ":HopChar2<CR>", opts("Hop Char 2"))
 km.set("n", "<leader>hp", ":HopPattern<CR>", opts("Hop Pattern"))
 
+-- Spectre
+vim.keymap.set("n", "<leader>Ss", '<cmd>lua require("spectre").toggle()<CR>', opts("Toggle Spectre"))
+km.set(
+	"n",
+	"<leader>Sw",
+	'<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+	opts("Search current word")
+)
+km.set("v", "<leader>Sw", '<esc><cmd>lua require("spectre").open_visual()<CR>', opts("Search visual selection"))
+km.set(
+	"n",
+	"<leader>Sf",
+	'<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+	opts("Search current word in file")
+)
+
 -- Git
-km.set("n", "<leader>gb", ":GitBlameToggle<CR>", opts("Git Blame Toggle"))
 km.set("n", "<leader>go", ":DiffviewOpen<CR>", opts("Git Diff"))
 km.set("n", "<leader>gc", ":DiffviewClose<CR>", opts("Git Diff Close"))
 

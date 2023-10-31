@@ -23,5 +23,4 @@ treesitter.setup({
 	autopairs = { enable = true },
 	autotag = { enable = true, enable_rename = true, enable_close = true, enable_close_on_slash = true },
 	context_commentstring = { enable = true, enable_autocmd = false },
-	matchup = { enable = true },
 })

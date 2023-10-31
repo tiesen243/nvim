@@ -10,6 +10,7 @@ require("configs.Interface.lualine")
 require("configs.Interface.notify")
 require("configs.Interface.nvimtree")
 require("configs.Interface.spectre")
+require("configs.Interface.surround")
 require("configs.Interface.telescope")
 require("configs.Interface.theme")
 require("configs.Interface.toggleterm")
@@ -29,5 +30,4 @@ require("configs.Treesitter.autopairs")
 require("configs.Treesitter.comment")
 
 -- Git
-require("configs.Git.gitblame")
 require("configs.Git.gitsigns")

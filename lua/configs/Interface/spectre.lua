@@ -27,5 +27,30 @@ spectre.setup({
 			cmd = "<cmd>lua require('spectre.actions').run_replace()<CR>",
 			desc = "replace all",
 		},
+		["change_view_mode"] = {
+			map = "v",
+			cmd = "<cmd>lua require('spectre').change_view()<CR>",
+			desc = "change result view mode",
+		},
+		["replace_cmd"] = {
+			map = "c",
+			cmd = "<cmd>lua require('spectre.actions').replace_cmd()<CR>",
+			desc = "input replace command",
+		},
+		["show_option_menu"] = {
+			map = "o",
+			cmd = "<cmd>lua require('spectre').show_options()<CR>",
+			desc = "show options",
+		},
+		["resume_last_search"] = {
+			map = "l",
+			cmd = "<cmd>lua require('spectre').resume_last_search()<CR>",
+			desc = "repeat last search",
+		},
+		["send_to_qf"] = {
+			map = "q",
+			cmd = "<cmd>lua require('spectre.actions').send_to_qf()<CR>",
+			desc = "send all items to quickfix",
+		},
 	},
 })

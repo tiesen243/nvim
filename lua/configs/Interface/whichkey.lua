@@ -17,8 +17,8 @@ local mappings = {
 		t = { "<cmd>TransparentToggle<cr>", "Transparent" },
 	},
 	q = { "<cmd>wqa<cr>", "Save and Quit" },
-	s = { name = "Split" },
-	S = { name = "Spectre" },
+	s = { name = "Spectre" },
+	S = { name = "Split" },
 	t = { name = "Terminal" },
 }
 

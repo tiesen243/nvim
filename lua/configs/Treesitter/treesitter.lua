@@ -21,6 +21,6 @@ treesitter.setup({
 		"markdown_inline",
 	},
 	autopairs = { enable = true },
-	autotag = { enable = true, enable_rename = true, enable_close = true, enable_close_on_slash = true },
+	autotag = { enable = true, enable_rename = true, enable_close = true, enable_close_on_slash = false },
 	context_commentstring = { enable = true, enable_autocmd = false },
 })

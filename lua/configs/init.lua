@@ -27,6 +27,7 @@ require("configs.LSP.copilot")
 -- Treesitter
 require("configs.Treesitter.treesitter")
 require("configs.Treesitter.autopairs")
+require("configs.Treesitter.autotag")
 require("configs.Treesitter.comment")
 
 -- Git

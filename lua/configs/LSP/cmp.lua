@@ -28,10 +28,9 @@ cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered(),
 	},
-
 	mapping = {
-		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 		["<Tab>"] = cmp.mapping.select_next_item(),
+		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
@@ -46,6 +45,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "copilot" },
 	},
 	formatting = {
 		format = lspkind.cmp_format({
@@ -87,7 +87,3 @@ lspkind.init({
 		Copilot = "",
 	},
 })
-
-vim.cmd([[ 
-  highlight Pmenu guifg=#ffffff guibg=none
-]])

@@ -22,7 +22,6 @@ require("configs.LSP.lspsaga")
 require("configs.LSP.mason")
 require("configs.LSP.null-ls")
 require("configs.LSP.cmp")
-require("configs.LSP.copilot")
 
 -- Treesitter
 require("configs.Treesitter.treesitter")

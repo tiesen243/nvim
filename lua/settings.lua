@@ -75,6 +75,7 @@ opt.iskeyword:append("-")
 opt.fillchars:append({ eob = " " })
 opt.mousemoveevent = true
 opt.encoding = "utf-8"
+opt.swapfile = false
 
 -- Notify
 local notify = vim.notify

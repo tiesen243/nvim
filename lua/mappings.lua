@@ -77,6 +77,7 @@ km.set("n", "<leader>go", "<cmd>DiffviewOpen<CR>", opts("Git Diff"))
 km.set("n", "<leader>gc", "<cmd>DiffviewClose<CR>", opts("Git Diff Close"))
 km.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts("Git Status"))
 km.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", opts("Git Branches"))
+km.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts("Git Commits"))
 
 -- Increment & Decrement
 km.set("n", "=", "<C-a>", opts("Increment"))

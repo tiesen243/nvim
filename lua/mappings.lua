@@ -79,6 +79,9 @@ km.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts("Git Status"))
 km.set("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", opts("Git Branches"))
 km.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts("Git Commits"))
 
+-- Copilot
+vim.cmd([[ imap <silent><script><expr> <C-a> copilot#Accept("\<CR>") ]])
+
 -- Increment & Decrement
 km.set("n", "=", "<C-a>", opts("Increment"))
 km.set("n", "-", "<C-x>", opts("Decrement"))

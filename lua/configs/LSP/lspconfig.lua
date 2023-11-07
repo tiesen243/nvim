@@ -26,7 +26,7 @@ signature.setup({
 	floating_window_opacity = 0.8,
 	fix_pos = true,
 	hint_enable = true,
-	hint_prefix = " ",
+	hint_prefix = "",
 	hint_scheme = "String",
 	hi_parameter = "Search",
 	max_height = 12,

@@ -25,7 +25,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("w", "󰈬  Find word", "<cmd>Telescope live_grep<CR>"),
 	dashboard.button("r", "  Recently opened files", "<cmd>Telescope oldfiles<CR>"),
 	dashboard.button("e", "  Files Explore", "<cmd>NvimTreeFindFileToggle<CR>"),
-	dashboard.button("c", "  Configuration", "<cmd>e ~/AppData/local/nvim/init.lua<CR>"),
+	dashboard.button("c", "  Configuration", "<cmd>e ~/.config/nvim/init.lua<CR>"),
 	dashboard.button("s", "  Update plugins", "<cmd>PackerSync<CR>"),
 	dashboard.button("q", "⏻  Quit", "<cmd>wqa<CR>"),
 }

@@ -31,8 +31,8 @@ km.set("n", "<leader>Ss", "<cmd>split<return><C-w>w", opts("Split"))
 km.set("n", "<leader>Sv", "<cmd>vsplit<return><C-w>w", opts("Vsplit"))
 
 -- Bufferline
-km.set("n", "<leader>]", "<cmd>BufferLineCycleNext<CR>", opts("Next Buffer"))
-km.set("n", "<leader>[", "<cmd>BufferLineCyclePrev<CR>", opts("Prev Buffer"))
+km.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", opts("Next Buffer"))
+km.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", opts("Prev Buffer"))
 km.set("n", "<leader>b}", "<cmd>BufferLineCloseRight<CR>", opts("Close Buffer Right"))
 km.set("n", "<leader>b{", "<cmd>BufferLineCloseLeft<CR>", opts("Close Buffer Left"))
 km.set("n", "<leader>bp", "<cmd>BufferLinePick<CR>", opts("Pick Buffer"))

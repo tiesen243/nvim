@@ -1,15 +1,26 @@
-local comment_status, comment = pcall(require, "Comment")
-if not comment_status then
+local Comment_status, Comment = pcall(require, "Comment")
+if not Comment_status then
 	return
 end
-
-comment.setup({
-	ignore = "^$",
+Comment.setup({
+	padding = true,
+	sticky = true,
+	ignore = nil,
 	toggler = {
-		block = "<leader>/",
+		line = "<Leader>/",
 	},
 	opleader = {
-		block = "<leader>/",
+		line = "<Leader>/",
 	},
-	pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+	mappings = {
+		basic = true,
+		extra = true,
+	},
+	pre_hook = function(...)
+		local loaded, ts_comment = pcall(require, "ts_context_commentstring.integrations.comment_nvim")
+		if loaded and ts_comment then
+			return ts_comment.create_pre_hook()(...)
+		end
+	end,
+	post_hook = nil,
 })

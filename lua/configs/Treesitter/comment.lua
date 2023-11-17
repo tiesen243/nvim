@@ -2,25 +2,33 @@ local Comment_status, Comment = pcall(require, "Comment")
 if not Comment_status then
 	return
 end
+
 Comment.setup({
 	padding = true,
 	sticky = true,
 	ignore = nil,
 	toggler = {
-		line = "<Leader>/",
+		line = "<C-/>",
+		block = "<C-S-/>",
 	},
 	opleader = {
-		line = "<Leader>/",
+		line = "<C-/>",
+		block = "<C-S-/>",
 	},
-	mappings = {
-		basic = true,
-		extra = true,
-	},
-	pre_hook = function(...)
-		local loaded, ts_comment = pcall(require, "ts_context_commentstring.integrations.comment_nvim")
-		if loaded and ts_comment then
-			return ts_comment.create_pre_hook()(...)
+	pre_hook = function(ctx)
+		local U = require("Comment.utils")
+
+		local location = nil
+
+		if ctx.ctype == U.ctype.block then
+			location = require("ts_context_commentstring.utils").get_cursor_location()
+		elseif ctx.motion == U.cmotion.v or ctx.cmotion == U.cmotion.v then
+			location = require("ts_context_commentstring.utils").get_visual_start_location()
 		end
+
+		return require("ts_context_commentstring.internal").calculate_commentstring({
+			key = ctx.ctype == U.ctype.line and "__default" or "__multiline",
+			location = location,
+		})
 	end,
-	post_hook = nil,
 })

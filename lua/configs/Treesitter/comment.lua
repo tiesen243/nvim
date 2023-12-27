@@ -3,6 +3,8 @@ if not Comment_status then
 	return
 end
 
+vim.g.skip_ts_context_commentstring_module = true
+
 Comment.setup({
 	padding = true,
 	sticky = true,

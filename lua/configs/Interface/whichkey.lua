@@ -2,7 +2,7 @@ local status, wk = pcall(require, "which-key")
 if not status then
 	return
 end
--- abcdefghijklmnopqrstuvwxyz
+
 local mappings = {
 	b = { name = "Bufferline" },
 	e = { "<cmd>NvimTreeToggle<CR>", "Explorer" },

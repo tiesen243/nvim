@@ -55,7 +55,7 @@ tree.setup({
 	view = {
 		cursorline = false,
 		float = {
-			enable = true,
+			enable = false,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
@@ -92,7 +92,7 @@ tree.setup({
 			restrict_above_cwd = true,
 		},
 		open_file = {
-			quit_on_open = true,
+			quit_on_open = false,
 			resize_window = true,
 			window_picker = {
 				enable = true,

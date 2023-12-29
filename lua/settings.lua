@@ -12,7 +12,6 @@ opt.relativenumber = false
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
-opt.autoindent = true
 opt.shiftround = true
 opt.smartindent = true
 opt.smarttab = true
@@ -44,6 +43,7 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- Auto
+opt.autoindent = true
 opt.autowrite = true
 opt.autoread = true
 opt.autochdir = true

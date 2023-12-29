@@ -17,7 +17,7 @@ tree.setup({
 			glyphs = {
 				default = "",
 				symlink = "",
-				bookmark = "",
+				bookmark = "",
 				modified = "●",
 				folder = {
 					arrow_closed = "",
@@ -55,13 +55,13 @@ tree.setup({
 	view = {
 		cursorline = false,
 		float = {
-			enable = false,
+			enable = true,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
 				border = "rounded",
 				width = 30,
-				height = 25,
+				height = 30,
 				row = 1,
 				col = 1,
 			},

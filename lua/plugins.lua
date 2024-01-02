@@ -63,9 +63,6 @@ return packer.startup(function(use)
 	use("MunifTanjim/nui.nvim")
 	use("stevearc/dressing.nvim")
 
-	-- Notify
-	use("rcarriga/nvim-notify")
-
 	-- Toggle term
 	use("akinsho/nvim-toggleterm.lua")
 

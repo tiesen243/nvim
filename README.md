@@ -3,21 +3,22 @@
 **Requiment**<br/>
 
 1. Install packer at [here](https://github.com/wbthomason/packer.nvim)
-2. Install nerd-font at [here](https://www.nerdfonts.com/font-downloads)
-3. Install fzf, fd, ripgrep, lazygit
-   - Ubuntu: `sudo apt install fzf fd-find ripgrep lazygit`
-   - MacOS: `brew install fzf fd ripgrep lazygit`
-   - Windows: install [scoop](https://scoop.sh/) and run `scoop install fzf fd ripgrep lazygit`
+2. Install nerd-font at [here](https://www.nerdfonts.com/font-downloads) and set it as your terminal font (I use FiraCode Nerd Font)
+3. Install fzf, fd, ripgrep, sed, lazygit
 
 **Try my config**<br/>
 
-> Windows<br/>
+> Windows
 
-      git clone git@github.com:Tiesen226/nvim.git $env:LOCALAPPDATA\nvim
+```bash
+git clone git@github.com:Tiesen226/nvim.git $env:LOCALAPPDATA\nvim
+```
 
-> Linux<br/>
+> Linux
 
-      git clone git@github.com:Tiesen226/nvim.git ~/.config/nvim
+```bash
+git clone git@github.com:Tiesen226/nvim.git ~/.config/nvim
+```
 
 **Note**<br/>
 

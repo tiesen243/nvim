@@ -120,6 +120,16 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jay-babu/mason-null-ls.nvim")
 
+	-- Markdown Preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown", "mdx" }
+		end,
+		ft = { "markdown", "mdx" },
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

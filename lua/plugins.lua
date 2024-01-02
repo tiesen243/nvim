@@ -69,14 +69,8 @@ return packer.startup(function(use)
 	-- Toggle term
 	use("akinsho/nvim-toggleterm.lua")
 
-	-- Hop
-	use({ "phaazon/hop.nvim", branch = "v2" })
-
 	-- Lightspeed
 	use("ggandor/lightspeed.nvim")
-
-	-- Jump
-	use("nacro90/numb.nvim")
 
 	-- Search and replace
 	use("windwp/nvim-spectre")
@@ -89,7 +83,7 @@ return packer.startup(function(use)
 
 	-- Treesitter Plugins --
 
-	use({ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 

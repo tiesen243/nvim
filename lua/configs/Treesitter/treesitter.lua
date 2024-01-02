@@ -6,7 +6,6 @@ end
 treesitter.setup({
 	sync_install = true,
 	auto_install = true,
-	highlight = { enable = true, additional_vim_regex_highlighting = true },
 	indent = { enable = true },
 	ensure_installed = {
 		"lua",
@@ -21,6 +20,7 @@ treesitter.setup({
 		"markdown_inline",
 	},
 	autopairs = { enable = true },
+	highlight = { enable = true, additional_vim_regex_highlighting = true },
 	autotag = { enable = true, enable_rename = true, enable_close = true, enable_close_on_slash = false },
-	context_commentstring = { enable = true, enable_autocmd = false },
+	context_commentstring = { enable = true, enable_autocmd = true },
 })

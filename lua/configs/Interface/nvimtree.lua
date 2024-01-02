@@ -8,7 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_gitignore = 1
 
 tree.setup({
-	hijack_cursor = true,
+	hijack_cursor = false,
 	auto_reload_on_write = true,
 	renderer = {
 		special_files = { "README.md", "readme.md", ".git" },
@@ -68,7 +68,7 @@ tree.setup({
 		},
 	},
 	diagnostics = {
-		enable = false,
+		enable = true,
 		show_on_dirs = false,
 		show_on_open_dirs = true,
 		debounce_delay = 50,

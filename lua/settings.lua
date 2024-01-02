@@ -64,14 +64,3 @@ g.copilot_filetypes = { ["*"] = true }
 
 -- Highlight
 vim.cmd([[autocmd ColorScheme * highlight Pmenu guibg=none]])
-
--- Notify
-local notify = vim.notify
-notify = require("notify")
----@diagnostic disable-next-line: duplicate-set-field
-vim.notify = function(msg, ...)
-	if msg:match("warning: multiple different client offset_encodings") then
-		return
-	end
-	notify(msg, ...)
-end

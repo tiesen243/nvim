@@ -24,3 +24,13 @@ treesitter.setup({
 	autotag = { enable = true, enable_rename = true, enable_close = true, enable_close_on_slash = false },
 	context_commentstring = { enable = true, enable_autocmd = true },
 })
+
+vim.filetype.add({
+	extension = {
+		mdx = "mdx",
+		conf = "bash",
+	},
+})
+
+vim.treesitter.language.register("markdown", "mdx")
+vim.treesitter.language.register("conf", "bash")

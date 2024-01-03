@@ -53,7 +53,7 @@ tree.setup({
 		},
 	},
 	view = {
-		cursorline = false,
+		cursorline = true,
 		float = {
 			enable = true,
 			quit_on_focus_loss = true,
@@ -92,7 +92,7 @@ tree.setup({
 			restrict_above_cwd = true,
 		},
 		open_file = {
-			quit_on_open = false,
+			quit_on_open = true,
 			resize_window = true,
 			window_picker = {
 				enable = true,

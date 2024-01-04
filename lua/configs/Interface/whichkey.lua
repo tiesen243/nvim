@@ -8,7 +8,6 @@ local mappings = {
 	e = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
 	f = { name = "Fuzzy Finder" },
 	g = { name = "Git" },
-	h = { name = "Hop" },
 	l = { name = "LSP" },
 	o = {
 		name = "Options",

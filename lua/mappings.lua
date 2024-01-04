@@ -39,8 +39,8 @@ km.set("n", "<leader>bp", "<cmd>BufferLinePick<CR>", opts("Pick Buffer"))
 km.set("n", "<leader>bP", "<cmd>BufferLinePickClose<CR>", opts("Pick Buffer and Close"))
 
 -- Terminal
-km.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts("Toggle Terminal"))
 km.set("n", "<leader>tg", lazygit, opts("Lazygit"))
+km.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts("Toggle Terminal"))
 
 -- Fuzzy Finder
 km.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts("Find Files"))
@@ -48,13 +48,6 @@ km.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts("Live Grep"))
 km.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts("Find Buffers"))
 km.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", opts("Find Recent Files"))
 km.set("n", "<leader>fe", "<cmd>Telescope file_browser<CR>", opts("File Browser"))
-
--- Hop
-km.set("n", "<leader>hw", "<cmd>HopWord<CR>", opts("Hop Word"))
-km.set("n", "<leader>hl", "<cmd>HopLine<CR>", opts("Hop Line"))
-km.set("n", "<leader>hc", "<cmd>HopChar1<CR>", opts("Hop Char"))
-km.set("n", "<leader>hC", "<cmd>HopChar2<CR>", opts("Hop Char 2"))
-km.set("n", "<leader>hp", "<cmd>HopPattern<CR>", opts("Hop Pattern"))
 
 -- Spectre
 vim.keymap.set("n", "<leader>ss", '<cmd>lua require("spectre").toggle()<CR>', opts("Toggle Spectre"))

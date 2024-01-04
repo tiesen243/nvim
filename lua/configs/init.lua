@@ -15,11 +15,11 @@ require("configs.Interface.toggleterm")
 require("configs.Interface.whichkey")
 
 -- LSP
+require("configs.LSP.cmp")
 require("configs.LSP.lspconfig")
 require("configs.LSP.lspsaga")
 require("configs.LSP.mason")
 require("configs.LSP.null-ls")
-require("configs.LSP.cmp")
 
 -- Treesitter
 require("configs.Treesitter.treesitter")

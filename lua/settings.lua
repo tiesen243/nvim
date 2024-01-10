@@ -61,8 +61,8 @@ g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.matchup_matchparen_offscreen = { method = "popup" }
 g.copilot_filetypes = { ["*"] = true }
-g.mkdp_auto_start = 1
-g.mkdp_auto_close = 1
+g.mkdp_auto_start = 0
+g.mkdp_auto_close = 0
 
 -- Highlight
 vim.cmd([[autocmd ColorScheme * highlight Pmenu guibg=none]])

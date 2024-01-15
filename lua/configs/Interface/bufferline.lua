@@ -1,4 +1,9 @@
-require("bufferline").setup({
+local status, bufferline = pcall(require, "bufferline")
+if not status then
+	return
+end
+
+bufferline.setup({
 	options = {
 		hover = {
 			enabled = true,
@@ -14,14 +19,17 @@ require("bufferline").setup({
 			},
 		},
 		numbers = "none",
-		indicator_icon = "▎",
 		buffer_close_icon = "",
 		modified_icon = "●",
-		close_icon = "",
+		close_icon = "",
 		left_trunc_marker = "",
 		right_trunc_marker = "",
 		max_name_length = 15,
 		separator_style = "thin",
+		indicator = {
+			icon = "▎",
+			style = "icon",
+		},
 	},
 })
 

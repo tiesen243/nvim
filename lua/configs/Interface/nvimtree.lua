@@ -6,10 +6,15 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_gitignore = 1
+vim.opt.termguicolors = true
 
 tree.setup({
-	hijack_cursor = false,
+	hijack_cursor = true,
 	auto_reload_on_write = true,
+	filters = {
+		dotfiles = true,
+		custom = { "node_modules" },
+	},
 	renderer = {
 		special_files = { "README.md", "readme.md", ".git" },
 		highlight_git = true,
@@ -55,7 +60,7 @@ tree.setup({
 	view = {
 		cursorline = true,
 		float = {
-			enable = true,
+			enable = false,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
@@ -69,7 +74,7 @@ tree.setup({
 	},
 	diagnostics = {
 		enable = true,
-		show_on_dirs = false,
+		show_on_dirs = true,
 		show_on_open_dirs = true,
 		debounce_delay = 50,
 		severity = {
@@ -83,29 +88,24 @@ tree.setup({
 			error = "",
 		},
 	},
-
+	update_focused_file = {
+		enable = true,
+		update_root = true,
+		ignore_list = { "help" },
+	},
 	actions = {
-		use_system_clipboard = true,
 		change_dir = {
-			enable = true,
-			global = true,
+			enable = false,
 			restrict_above_cwd = true,
 		},
 		open_file = {
-			quit_on_open = true,
 			resize_window = true,
 			window_picker = {
-				enable = true,
-				picker = "default",
-				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
-				exclude = {
-					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
-					buftype = { "nofile", "terminal", "help" },
-				},
+				chars = "aoeui",
 			},
 		},
 		remove_file = {
-			close_window = true,
+			close_window = false,
 		},
 	},
 	ui = {
@@ -113,6 +113,9 @@ tree.setup({
 			remove = true,
 			trash = true,
 		},
+	},
+	sort = {
+		sorter = "case_sensitive",
 	},
 	git = {
 		enable = true,

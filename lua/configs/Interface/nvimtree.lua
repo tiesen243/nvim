@@ -90,12 +90,12 @@ tree.setup({
 	},
 	update_focused_file = {
 		enable = true,
-		update_root = true,
+		update_root = false,
 		ignore_list = { "help" },
 	},
 	actions = {
 		change_dir = {
-			enable = false,
+			enable = true,
 			restrict_above_cwd = true,
 		},
 		open_file = {

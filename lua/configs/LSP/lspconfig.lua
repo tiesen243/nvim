@@ -37,7 +37,7 @@ signature.setup({
 })
 
 -- Enable the following language servers
-local servers = { "tailwindcss", "emmet_ls", "pyright", "clangd" }
+local servers = { "tailwindcss", "emmet_ls", "pyright", "clangd", "prismals" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		capabilities = capabilities,

@@ -39,6 +39,7 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"tsserver",
 		"emmet_ls",
+		"prismals",
 	},
 })
 

@@ -78,3 +78,6 @@ vim.cmd([[ imap <silent><script><expr> <C-a> copilot#Accept("\<CR>") ]])
 -- Increment & Decrement
 km.set("n", "=", "<C-a>", opts("Increment"))
 km.set("n", "-", "<C-x>", opts("Decrement"))
+
+-- Remove some default mappings
+km.set("n", "u", "<nop>", opts("Disable undo"))

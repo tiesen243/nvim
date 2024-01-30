@@ -5,15 +5,13 @@ end
 
 -- LuaSnip setup
 local snip = luasnip.snippet
-local node = luasnip.snippet_node
 local text = luasnip.text_node
 local insert = luasnip.insert_node
 local func = luasnip.function_node
-local choice = luasnip.choice_node
-local dynamicn = luasnip.dynamic_node
 
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
+
 local date = function()
 	return { os.date("!%Y-%m-%dT%H:%M:%S.000Z") }
 end
@@ -98,7 +96,7 @@ luasnip.add_snippets(nil, {
 			}),
 			insert(1, "title"),
 			text({ "',", "\t\tdescription: '" }),
-			insert(1, "description"),
+			insert(2, "description"),
 			text({ "'", "}" }),
 		}),
 
@@ -116,7 +114,7 @@ luasnip.add_snippets(nil, {
 			}),
 			insert(1, "title"),
 			text({ "',", "\t\tdescription: '" }),
-			insert(1, "description"),
+			insert(2, "description"),
 			text({ "'", "\t}", "}" }),
 		}),
 

@@ -246,7 +246,7 @@ luasnip.add_snippets(nil, {
 				"\t\t@apply bg-transparent;",
 				"\t}",
 				"\t::-webkit-scrollbar-thumb {",
-				"\t\t@apply rounded-full bg-default;",
+				"\t\t@apply rounded-full bg-ring;",
 				"\t}",
 				"}",
 			}),

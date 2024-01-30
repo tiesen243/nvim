@@ -31,6 +31,7 @@ opt.termguicolors = true
 opt.syntax = "enable"
 opt.title = true
 opt.wrap = false
+opt.completeopt = "menu,menuone,noselect"
 
 -- Backspace
 opt.backspace = "indent,eol,start"
@@ -54,6 +55,8 @@ opt.fillchars:append({ eob = " " })
 opt.mousemoveevent = true
 opt.encoding = "utf-8"
 opt.swapfile = false
+opt.foldenable = false
+opt.foldmethod = "indent"
 
 -- Global
 g.mapleader = " "

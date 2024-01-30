@@ -20,9 +20,6 @@ km.set("n", "<C-r>", "<cmd>redo<CR>", opts("Quit"))
 km.set("n", "<leader>;", "<cmd>Alpha<CR>", opts("Dashboard"))
 km.set("n", "<Esc>", "<cmd>noh<CR>", opts("Escape search highlight"))
 
--- Delete word backward
-km.set("n", "dw", 'vb"_d', opts("Delete word backward"))
-
 -- Select all
 km.set("n", "<C-a>", "gg<S-v>G", opts("Select all"))
 
@@ -79,5 +76,6 @@ vim.cmd([[ imap <silent><script><expr> <C-a> copilot#Accept("\<CR>") ]])
 km.set("n", "=", "<C-a>", opts("Increment"))
 km.set("n", "-", "<C-x>", opts("Decrement"))
 
--- Remove some default mappings
+-- Change some default mappings
 km.set("n", "u", "<nop>", opts("Disable undo"))
+km.set("n", "a", "<nop>", opts("Disable append"))

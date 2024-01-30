@@ -13,10 +13,8 @@ if not lspkind_status then
 	return
 end
 
--- Load friendly-snippets
 require("luasnip/loaders/from_vscode").lazy_load()
-
-vim.opt.completeopt = "menu,menuone,noselect"
+require("configs.LSP.custom-snippets")
 
 cmp.setup({
 	snippet = {
@@ -29,12 +27,31 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 	},
 	mapping = {
-		["<Tab>"] = cmp.mapping.select_next_item(),
-		["<S-Tab>"] = cmp.mapping.select_prev_item(),
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
+
 		["<C-e>"] = cmp.mapping.close(),
 		["<C-k>"] = cmp.mapping.scroll_docs(-4),
 		["<C-j>"] = cmp.mapping.scroll_docs(4),

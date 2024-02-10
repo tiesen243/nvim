@@ -34,18 +34,14 @@ dashboard.section.buttons.opts = {
 	position = "center",
 }
 
-local function footer()
-	return {
-		[[]],
-		[[]],
-		[[]],
-		[[]],
-		[[Losers should hurry up and scram! Wa ha ha!]],
-		[[                                    Duci <4]],
-	}
-end
-
-dashboard.section.footer.val = footer()
+dashboard.section.footer.val = {
+	[[                                              ]],
+	[[                                              ]],
+	[[                                              ]],
+	[[                                              ]],
+	[[                            Code in, Bugs out!]],
+	[[                                   Yukikaze <4]],
+}
 
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"

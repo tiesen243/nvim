@@ -39,7 +39,7 @@ dashboard.section.footer.val = {
 	[[                                              ]],
 	[[                                              ]],
 	[[                                              ]],
-	[[                            Code in, Bugs out!]],
+	[[                   Code in, Bugs out nanodaaa!]],
 	[[                                   Yukikaze <4]],
 }
 

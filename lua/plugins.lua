@@ -31,7 +31,6 @@ return packer.startup(function(use)
 
 	-- Themes
 	use("Mofiqul/dracula.nvim")
-	use("xiyaowong/transparent.nvim")
 
 	-- GUI
 	use("nvim-tree/nvim-tree.lua")

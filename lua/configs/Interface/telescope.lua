@@ -47,4 +47,4 @@ telescope.setup({
 
 telescope.load_extension("file_browser")
 
--- vim.cmd([[highlight TelescopeNormal none]])
+vim.cmd([[highlight TelescopeNormal none]])

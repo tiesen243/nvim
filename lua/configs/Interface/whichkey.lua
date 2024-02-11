@@ -24,20 +24,22 @@ local mappings = {
 
 local opts = {
 	mode = { "n" },
-	prefix = " ",
+	prefix = "<leader>",
 	buffer = nil,
 	silent = true,
 	noremap = true,
 	nowait = true,
 }
+
 vim.o.timeoutlen = 100
 vim.o.timeout = true
+
 wk.register(mappings, opts)
 
 wk.setup({
 	window = {
 		border = "rounded",
-		winblend = -100,
+		winblend = 0,
 		position = "bottom",
 	},
 	layout = {

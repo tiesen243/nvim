@@ -69,3 +69,5 @@ g.mkdp_auto_close = 0
 
 -- Highlight
 vim.cmd([[autocmd ColorScheme * highlight Pmenu guibg=none]])
+vim.cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none guifg=none]])
+vim.cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none guifg=none]])

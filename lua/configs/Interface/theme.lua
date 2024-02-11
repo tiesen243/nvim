@@ -11,4 +11,4 @@ dracula.setup({
 	lualine_bg_color = "nil",
 })
 
-vim.cmd([[colorscheme dracula]])
+vim.cmd("colorscheme dracula")

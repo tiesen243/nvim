@@ -40,6 +40,8 @@ mason_lspconfig.setup({
 		"tsserver",
 		"emmet_ls",
 		"prismals",
+		-- C/C++
+		"clangd",
 	},
 })
 
@@ -53,5 +55,8 @@ mason_null_ls.setup({
 		-- Python
 		"black",
 		"flake8",
+		-- C/C++
+		"clang-format",
+		"cpplint",
 	},
 })

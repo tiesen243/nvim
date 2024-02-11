@@ -43,18 +43,19 @@ return packer.startup(function(use)
 			vim.cmd("colorscheme dracula")
 		end,
 	})
+
+	-- Dashboard
+	use("goolord/alpha-nvim")
+
 	-- GUI
 	use("nvim-tree/nvim-tree.lua")
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
-	use({ "akinsho/bufferline.nvim", tag = "*" })
+	use("akinsho/bufferline.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Colorizer
 	use("NvChad/nvim-colorizer.lua")
-
-	-- Dashboard
-	use("goolord/alpha-nvim")
 
 	-- Which Key
 	use("folke/which-key.nvim")
@@ -62,7 +63,6 @@ return packer.startup(function(use)
 	-- Telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-media-files.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
 
 	-- Tmux Navigator

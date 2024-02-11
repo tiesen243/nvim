@@ -16,8 +16,7 @@ km.set("n", "<C-s>", "<cmd>w<CR>", opts("Save"))
 km.set("i", "<C-s>", "<Esc>:w<CR>", opts("Save"))
 km.set("n", "<C-z>", "<cmd>undo<CR>", opts("Undo"))
 km.set("i", "<C-z>", "<Esc>:undo<CR>", opts("Undo"))
-km.set("n", "<C-r>", "<cmd>redo<CR>", opts("Quit"))
-km.set("n", "<leader>;", "<cmd>Alpha<CR>", opts("Dashboard"))
+km.set("n", "<C-r>", "<cmd>:redo<CR>", opts("Quit"))
 km.set("n", "<Esc>", "<cmd>noh<CR>", opts("Escape search highlight"))
 
 -- Select all
@@ -79,3 +78,6 @@ km.set("n", "-", "<C-x>", opts("Decrement"))
 -- Change some default mappings
 km.set("n", "u", "<nop>", opts("Disable undo"))
 km.set("n", "a", "<nop>", opts("Disable append"))
+
+-- LSP
+km.set("n", "<C-o>", "<cmd>OrganizeImports<CR>", opts("Organize Imports"))

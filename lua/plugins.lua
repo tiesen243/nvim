@@ -30,8 +30,19 @@ return packer.startup(function(use)
 	-- Interface Plugins --
 
 	-- Themes
-	use("Mofiqul/dracula.nvim")
-
+	use({
+		"Mofiqul/dracula.nvim",
+		config = function()
+			local dracula = require("dracula")
+			dracula.setup({
+				transparent_bg = true,
+				italic_comment = true,
+				show_end_of_buffer = true,
+				lualine_bg_color = "nil",
+			})
+			vim.cmd("colorscheme dracula")
+		end,
+	})
 	-- GUI
 	use("nvim-tree/nvim-tree.lua")
 	use("nvim-tree/nvim-web-devicons")

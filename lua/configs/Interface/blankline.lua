@@ -8,28 +8,28 @@ if not status_hooks then
 	return
 end
 
+local colors = require("dracula").colors()
+
 local highlight = {
 	"RainbowRed",
+	"RainbowGreen",
 	"RainbowYellow",
 	"RainbowBlue",
-	"RainbowOrange",
-	"RainbowGreen",
-	"RainbowViolet",
+	"RainbowMagenta",
 	"RainbowCyan",
 }
 
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-	vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-	vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-	vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-	vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-	vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-	vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-	vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+	vim.api.nvim_set_hl(0, "RainbowRed", { fg = colors.bright_red })
+	vim.api.nvim_set_hl(0, "RainbowGreen", { fg = colors.bright_green })
+	vim.api.nvim_set_hl(0, "RainbowYellow", { fg = colors.bright_yellow })
+	vim.api.nvim_set_hl(0, "RainbowBlue", { fg = colors.bright_blue })
+	vim.api.nvim_set_hl(0, "RainbowMagenta", { fg = colors.bright_magenta })
+	vim.api.nvim_set_hl(0, "RainbowCyan", { fg = colors.bright_cyan })
+	vim.api.nvim_set_hl(0, "RainbowWhite", { fg = colors.bright_white })
 end)
 
-ibl.setup({
-	indent = { char = "▏" },
-	scope = { highlight = highlight, exclude = { language = { "lua" } } },
-	whitespace = { highlight = { "Whitespace", "NonText" } },
-})
+vim.g.rainbow_delimiters = { highlight = highlight }
+ibl.setup({ indent = { highlight = highlight }, scope = { highlight = { "RainbowWhite" } } })
+
+hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)

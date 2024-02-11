@@ -3,6 +3,13 @@ if not setup then
 	return
 end
 
+local status, icons = pcall(require, "nvim-web-devicons")
+if not status then
+	return
+end
+
+icons.setup({ default = true })
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.nvim_tree_gitignore = 1

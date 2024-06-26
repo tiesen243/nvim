@@ -1,6 +1,6 @@
 local M = {
-	"nvim-tree/nvim-web-devicons",
-	"github/copilot.vim",
+  "nvim-tree/nvim-web-devicons",
+  "github/copilot.vim",
 }
 
 return M

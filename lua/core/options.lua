@@ -29,7 +29,7 @@ opt.clipboard = "unnamedplus"
 opt.cursorline = true
 opt.cursorcolumn = false
 opt.guicursor =
-	"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 -- Auto
 opt.autoread = true
@@ -49,4 +49,5 @@ opt.scrolloff = 8
 
 -- Providers
 g.loaded_node_provider = 0
+g.loaded_python_provider = 0
 g.loaded_python_provider = 0

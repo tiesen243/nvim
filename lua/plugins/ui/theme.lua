@@ -4,18 +4,18 @@ M.lazy = false
 M.priority = 1000
 
 M.config = function()
-	local status_ok, github = pcall(require, "github-theme")
-	if not status_ok then
-		return
-	end
+  local status_ok, github = pcall(require, "github-theme")
+  if not status_ok then
+    return
+  end
 
-	github.setup({
-		options = {
-			transparent = true,
-		},
-	})
+  github.setup({
+    options = {
+      transparent = vim.g.transparent_enabled,
+    },
+  })
 
-	vim.cmd([[colorscheme github_dark_default]])
+  vim.cmd([[colorscheme github_dark_default]])
 end
 
 return M

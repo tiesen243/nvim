@@ -1,18 +1,20 @@
 local M = { "lewis6991/gitsigns.nvim" }
 
-M.config = function()
-	local status_ok, gitsigns = pcall(require, "gitsigns")
-	if not status_ok then
-		return
-	end
+M.lazy = false
 
-	gitsigns.setup()
+M.config = function()
+  local status_ok, gitsigns = pcall(require, "gitsigns")
+  if not status_ok then
+    return
+  end
+
+  gitsigns.setup()
 end
 
 M.keys = {
-	{ "<leader>g", "<nop>", desc = "Git" },
-	{ "<leader>gb", "<cmd>Gitsigns blame<cr>", desc = "Blame" },
-	{ "<leader>gl", "<cmd>Gitsigns blameline<cr>", desc = "Blame Line" },
+  { "<leader>g",  "<nop>",                       desc = "Git" },
+  { "<leader>gb", "<cmd>Gitsigns blame<cr>",     desc = "Blame" },
+  { "<leader>gl", "<cmd>Gitsigns blameline<cr>", desc = "Blame Line" },
 }
 
 return M

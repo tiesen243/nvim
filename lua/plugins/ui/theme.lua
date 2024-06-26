@@ -12,6 +12,16 @@ M.config = function()
   github.setup({
     options = {
       transparent = vim.g.transparent_enabled,
+      dim_inactive = true,
+      darken = { floats = false },
+      styles = {
+        comments = "italic",
+        keywords = "bold",
+        types = "italic,bold",
+      },
+      modules = {
+        whichkey = { enable = true, background = false },
+      }
     },
   })
 

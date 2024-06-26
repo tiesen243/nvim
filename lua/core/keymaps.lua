@@ -25,6 +25,13 @@ key("n", "<leader>s", "<nop>", opts("Split"))
 key("n", "<leader>ss", "<cmd>split<cr>", opts("Split horizontally"))
 key("n", "<leader>sv", "<cmd>vsplit<cr>", opts("Split vertically"))
 
+-- Move lines
+key("n", "<C-down>", "<cmd>m .+1<cr>==", opts("Move line down"))
+key("n", "<C-up>", "<cmd>m .-2<cr>==", opts("Move line up"))
+
+-- Terminal
+key("n", "<leader>t", "<cmd>below 10sp term://$SHELL<cr>", opts("Open terminal"))
+
 -- Lazy vim
 key("n", "<leader>L", "<nop>", opts("Lazy"))
 key("n", "<leader>Ls", "<cmd>Lazy sync<cr>", opts("Lazy sync"))

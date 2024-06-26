@@ -5,6 +5,8 @@ M.dependencies = {
 	"nvim-telescope/telescope-file-browser.nvim",
 }
 
+M.lazy = false
+
 M.config = function()
 	local status_ok, telescope = pcall(require, "telescope")
 	if not status_ok then

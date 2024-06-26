@@ -1,49 +1,46 @@
-local M = {}
+local M = { "williamboman/mason.nvim" }
 
-local mason = { "williamboman/mason.nvim" }
+M.dependencies = {
+	"williamboman/mason-lspconfig.nvim",
+}
 
-mason.config = function()
-	require("mason").setup({
+M.config = function()
+	local status_ok, mason = pcall(require, "mason")
+	if not status_ok then
+		return
+	end
+
+	local status_okk, mason_lspconfig = pcall(require, "mason-lspconfig")
+	if not status_okk then
+		return
+	end
+
+	mason.setup({
 		ui = {
-			icons = {
-				package_installed = "✓",
-				package_pending = "➜",
-				package_uninstalled = "✗",
-			},
+			icons = { package_installed = "✓", package_pending = "➜", package_uninstalled = "✗" },
+		},
+	})
+
+	mason_lspconfig.setup({
+		ensure_installed = {
+			--Lua
+			"lua_ls",
+
+			--Web Development
+			"html",
+			"cssls",
+			"tailwindcss",
+			"tsserver",
+			"eslint",
+			"prismals",
+
+			--Python
+			"pyright",
+
+			-- Utils
+			"dockerls",
 		},
 	})
 end
-
-local mason_lspconfig = { "williamboman/mason-lspconfig.nvim" }
-
-mason_lspconfig.config = function()
-	require("mason-lspconfig").setup()
-end
-
-local lsp_signature = { "ray-x/lsp_signature.nvim" }
-
-lsp_signature.config = function()
-	require("lsp_signature").setup({
-		bind = true,
-		doc_lines = 2,
-		floating_window = true,
-		floating_window_above_cur_line = true,
-		floating_window_opacity = 0.8,
-		fix_pos = true,
-		hint_enable = true,
-		hint_prefix = "",
-		hint_scheme = "String",
-		hi_parameter = "Search",
-		max_height = 12,
-		max_width = 120,
-		handler_opts = { border = "rounded" },
-		extra_trigger_chars = {},
-		zindex = 200,
-	})
-end
-
-table.insert(M, mason)
-table.insert(M, mason_lspconfig)
-table.insert(M, lsp_signature)
 
 return M

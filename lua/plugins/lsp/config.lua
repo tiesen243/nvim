@@ -26,13 +26,37 @@ M.config = function()
 		vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>", opts("Definition"))
 	end
 
-	local servers = {}
+	local servers = { "html", "tailwindcss", "eslint", "prismals", "pyright", "dockerls" }
 	for _, lsp in ipairs(servers) do
 		lspconfig[lsp].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
 	end
+
+	lspconfig["tsserver"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		cmd = { "typescript-language-server", "--stdio" },
+		commands = {
+			OrganizeImports = {
+				function()
+					local params = {
+						command = "_typescript.organizeImports",
+						arguments = { vim.api.nvim_buf_get_name(0) },
+						title = "Organize Imports",
+					}
+					vim.lsp.buf.execute_command(params)
+				end,
+			},
+		},
+	})
+
+	lspconfig["cssls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = { css = { validate = true, lint = { unknownAtRules = "ignore" } } },
+	})
 
 	lspconfig["lua_ls"].setup({
 		on_attach = on_attach,

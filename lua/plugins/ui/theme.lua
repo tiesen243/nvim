@@ -13,11 +13,18 @@ M.config = function()
     options = {
       transparent = vim.g.transparent_enabled,
       dim_inactive = true,
-      darken = { floats = false },
+      darken = { floats = true },
       styles = {
-        comments = "italic",
-        keywords = "bold",
-        types = "italic,bold",
+        comments = "NONE",
+        conditionals = "NONE",
+        constants = "bold",
+        functions = "bold",
+        keywords = "NONE",
+        numbers = "NONE",
+        operators = "NONE",
+        strings = "NONE",
+        types = "italic",
+        variables = "NONE",
       },
     },
   })

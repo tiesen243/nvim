@@ -26,11 +26,6 @@ M.config = function()
 		return
 	end
 
-	local status_okkkk, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
-	if not status_okkkk then
-		return
-	end
-
 	require("luasnip.loaders.from_vscode").lazy_load()
 
 	cmp.setup({
@@ -85,7 +80,7 @@ M.config = function()
 		},
 	})
 
-	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+	cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
 
 	lspkind.init({ mode = "symbol" })
 end

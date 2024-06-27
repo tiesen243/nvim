@@ -38,14 +38,19 @@ opt.autochdir = true
 opt.autoindent = true
 
 -- Others
+opt.list = true
+opt.mouse = "a"
+opt.scrolloff = 8
+opt.pumblend = 10
+opt.pumheight = 10
 opt.swapfile = false
+opt.linebreak = true
 opt.conceallevel = 2
 opt.fillchars.eob = " "
 opt.shortmess:append("c")
-opt.whichwrap:append("<,>,[,],h,l")
 opt.iskeyword:append("-")
+opt.whichwrap:append("<,>,[,],h,l")
 opt.completeopt = { "menuone", "noselect" }
-opt.scrolloff = 8
 
 -- Providers
 g.loaded_node_provider = 0

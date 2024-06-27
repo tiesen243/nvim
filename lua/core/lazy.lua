@@ -17,7 +17,7 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.ui" },
 		{ import = "plugins.lsp" },
-		{ import = "plugins.treesitter" },
+		{ import = "plugins.helpers" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
@@ -27,7 +27,7 @@ require("lazy").setup({
 
 	ui = {
 		-- The backdrop opacity. 0 is fully opaque, 100 is fully transparent.
-		backdrop = 100,
+		backdrop = 0,
 		border = "rounded",
 	},
 })

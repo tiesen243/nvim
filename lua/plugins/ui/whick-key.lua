@@ -26,12 +26,10 @@ M.config = function()
 		shows_help = false,
 		ignore_missing = false,
 		window = {
-			winblend = 1,
-			order = "rounded",
 			position = "bottom",
 		},
 		layout = {
-			spacing = 10,
+			spacing = 20,
 			align = "center",
 		},
 	})

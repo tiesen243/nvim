@@ -19,9 +19,6 @@ M.config = function()
         keywords = "bold",
         types = "italic,bold",
       },
-      modules = {
-        whichkey = { enable = true, background = false },
-      }
     },
   })
 

@@ -36,7 +36,7 @@ M.config = function()
 		vim.keymap.set("n", "<leader>ll", "<cmd>Lspsaga show_line_diagnostics<cr>", opts("Line Diagnostics"))
 	end
 
-	local servers = { "html", "tailwindcss", "eslint", "prismals", "pyright", "dockerls" }
+	local servers = { "html", "tailwindcss", "eslint", "prismals", "pyright", "dockerls", "hyprls" }
 	for _, lsp in ipairs(servers) do
 		lspconfig[lsp].setup({
 			on_attach = on_attach,

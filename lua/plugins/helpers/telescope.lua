@@ -1,6 +1,8 @@
 local M = { "nvim-telescope/telescope.nvim" }
 
-M.dependencies = { "nvim-telescope/telescope-file-browser.nvim" }
+M.dependencies = {
+  "nvim-telescope/telescope-file-browser.nvim",
+}
 
 M.lazy = false
 

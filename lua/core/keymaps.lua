@@ -48,6 +48,7 @@ map("v", ">", ">gv", opts("Indent"))
 
 -- Terminal
 map("n", "<leader>t", "<cmd>below 10sp term://$SHELL<cr>", opts("Open terminal"))
+map("t", "<esc>", "<C-\\><C-n>", opts("Exit terminal mode"))
 
 -- Options
 map("n", "<leader>o", "<nop>", opts("Options"))

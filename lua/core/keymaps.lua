@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 local opts = function(desc)
-	return { noremap = true, silent = true, expr = false, nowait = false, desc = desc }
+  return { noremap = true, silent = true, expr = false, nowait = false, desc = desc }
 end
 
 -- General
@@ -27,10 +27,10 @@ map("n", "<leader>ss", "<cmd>split<cr>", opts("Split horizontally"))
 map("n", "<leader>sv", "<cmd>vsplit<cr>", opts("Split vertically"))
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", opts("Increase Window Height"))
-map("n", "<C-Down>", "<cmd>resize -2<cr>", opts("Decrease Window Height"))
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts("Decrease Window Width"))
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts("Increase Window Width"))
+map("n", "<C-Up>", "<cmd>lua require('tmux').resize_top()<cr>", opts("Increase Window Height"))
+map("n", "<C-Down>", "<cmd>lua require('tmux').resize_bottom()<cr>", opts("Decrease Window Height"))
+map("n", "<C-Left>", "<cmd>lua require('tmux').resize_left()<cr>", opts("Decrease Window Width"))
+map("n", "<C-Right>", "<cmd>lua require('tmux').resize_right()<cr>", opts("Increase Window Width"))
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })

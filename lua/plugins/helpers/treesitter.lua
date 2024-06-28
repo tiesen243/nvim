@@ -17,6 +17,7 @@ M.config = function()
 	})
 
 	vim.filetype.add({ extension = { mdx = "mdx", conf = "bash" } })
+	vim.filetype.add({ pattern = { [".*/hypr/.*%.conf"] = "hyprlang" } })
 
 	vim.treesitter.language.register("markdown", "mdx")
 	vim.treesitter.language.register("conf", "bash")

@@ -1,6 +1,6 @@
 # My Neovim Config
 
-![preivew](./preview.png)
+![preview](./assets/preview.png)
 
 **Requiment**
 

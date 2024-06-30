@@ -9,15 +9,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Disable miniindentscope for some filetypes
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("disable_miniindentscope"),
-  pattern = { "help", "alpha", "dashboard", "NvimTree", "lazy", "mason" },
-  callback = function()
-    vim.b.miniindentscope_disable = true
-  end,
-})
-
 -- Fix conceallevel for json files
 vim.api.nvim_create_autocmd({ "FileType" }, {
   group = augroup("json_conceal"),

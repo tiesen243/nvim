@@ -2,7 +2,6 @@ local M = { "hrsh7th/nvim-cmp" }
 
 M.dependencies = {
   "hrsh7th/cmp-path",
-  "hrsh7th/cmp-emoji",
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-nvim-lsp",
   "onsails/lspkind-nvim",
@@ -69,7 +68,6 @@ M.config = function()
 
     sources = {
       { name = "path" },
-      { name = "emoji" },
       { name = "buffer" },
       { name = "luasnip" },
       { name = "nvim_lsp" },

@@ -19,6 +19,9 @@ M.config = function()
 
       -- Python
       formatters.black,
+
+      -- Rust
+      formatters.rustfmt,
     },
 
     -- Format on save

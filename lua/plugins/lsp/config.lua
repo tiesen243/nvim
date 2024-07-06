@@ -43,7 +43,8 @@ M.config = function()
 		end
 	end
 
-	local servers = { "html", "emmet_ls", "tailwindcss", "eslint", "prismals", "pyright", "dockerls", "hyprls" }
+	local servers =
+		{ "html", "emmet_ls", "tailwindcss", "eslint", "prismals", "pyright", "rust_analyzer", "dockerls", "hyprls" }
 	for _, lsp in ipairs(servers) do
 		lspconfig[lsp].setup({
 			on_attach = on_attach,

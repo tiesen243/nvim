@@ -6,32 +6,40 @@ M.config = function()
     return
   end
 
-  vim.o.timeout = true
-  vim.o.timeoutlen = 100
-
-  local mappings = {}
-  local opts = {
-    mode = { "n" },
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = true,
-  }
-
-  wk.register(mappings, opts)
-
   wk.setup({
-    triggers = " ",
-    shows_help = false,
-    ignore_missing = false,
-    window = {
-      border = "rounded",
-      position = "bottom",
+    ---@type false | "classic" | "modern" | "helix"
+    preset = "modern",
+
+    modes = {
+      n = true,  -- Normal mode
+      i = false, -- Insert mode
+      x = true,  -- Visual mode
+      s = true,  -- Select mode
+      o = false, -- Operator pending mode
+      t = false, -- Terminal mode
+      c = false, -- Command mode
+    },
+
+    win = {
+      -- width = 1,
+      -- height = { min = 4, max = 25 },
+      -- col = 0,
+      row = -1,
+      border = "none",
+      padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
+      title = true,
+      title_pos = "center",
+      zindex = 1000,
+      -- Additional vim.wo and vim.bo options
+      bo = {},
+      wo = {
+        winblend = 1, -- value between 0-100 0 for fully opaque and 100 for fully transparent
+      },
     },
     layout = {
-      spacing = 20,
-      align = "center",
+      width = { min = 20 }, -- min and max width of the columns
+      spacing = 4,          -- spacing between columns
+      align = "center",     -- align columns left, center or right
     },
   })
 end

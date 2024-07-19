@@ -10,15 +10,7 @@ M.config = function()
     ---@type false | "classic" | "modern" | "helix"
     preset = "modern",
 
-    modes = {
-      n = true,  -- Normal mode
-      i = false, -- Insert mode
-      x = false, -- Visual mode
-      s = false, -- Select mode
-      o = false, -- Operator pending mode
-      t = false, -- Terminal mode
-      c = false, -- Command mode
-    },
+    triggers = { "<leader>", mode = { "n" } },
 
     win = {
       -- width = 1,

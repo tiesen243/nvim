@@ -12,11 +12,18 @@ M.config = function()
     return
   end
 
+  require("CopilotChat.integrations.cmp").setup()
+
   CopilotChat.setup({
     debug = true,
     window = {
       layout = "float",
       title = "Copilot Chat",
+    },
+    mappings = {
+      complete = {
+        insert = "",
+      },
     },
   })
 end
@@ -31,6 +38,14 @@ M.keys = {
   { "<leader>gcd", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "Fix Diagnostic" },
   { "<leader>gcc", "<cmd>CopilotChatCommit<cr>",        desc = "Suggest commit message" },
   { "<leader>gcs", "<cmd>CopilotChatCommitStaged<cr>",  desc = "Suggest commit stage message" },
+  {
+    "<leader>gcp",
+    function()
+      local actions = require("CopilotChat.actions")
+      require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+    end,
+    desc = "CopilotChat - Prompt actions",
+  },
 }
 
 return M

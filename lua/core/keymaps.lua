@@ -8,7 +8,7 @@ map("n", "<C-a>", "<cmd>normal! ggVG<cr>", opts("Select all"))
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts("Quit search mode"))
 map("n", "<leader>q", "<cmd>wqa<cr>", opts("Save and close all buffers"))
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>write<cr><esc>", opts("Save current buffer"))
-map("n", "9", "$", opts("End of line"))
+map({ "n", "x" }, "9", "$", opts("End of line"))
 
 -- Undo & Redo
 map("n", "<C-z>", "<cmd>undo<cr>", opts("Undo"))

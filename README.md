@@ -23,4 +23,4 @@ git clone git@github.com:tiesen243/nvim.git ~/.config/nvim
 
 **Note**
 
-1. The default `<leader>` shortcut is `<space>` (you can change it in `settings.lua`)
+1. The default `<leader>` shortcut is `<space>` (you can change it in `lua/core/lazy.lua`)

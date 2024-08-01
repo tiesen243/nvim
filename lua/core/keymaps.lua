@@ -5,7 +5,6 @@ end
 
 -- General
 map({ "n", "x" }, "9", "$", opts("End of line"))
-map("n", "p", '"_p', opts("Paste without yanking"))
 map("n", "x", '"_x', opts("Delete without yanking"))
 map("n", "<C-a>", "<cmd>normal! ggVG<cr>", opts("Select all"))
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts("Quit search mode"))

@@ -1,12 +1,12 @@
 local M = { "stevearc/dressing.nvim" }
 
 M.setup = function()
-	local status_ok, dressing = pcall(require, "dressing")
-	if not status_ok then
-		return
-	end
+  local status_ok, dressing = pcall(require, "dressing")
+  if not status_ok then
+    return
+  end
 
-	dressing.setup({})
+  dressing.setup({})
 end
 
 return M

@@ -29,10 +29,11 @@ M.config = function()
       --Web Development
       "html",
       "cssls",
-      "tailwindcss",
-      "tsserver",
       "eslint",
+      "emmet_ls",
+      "tsserver",
       "prismals",
+      "tailwindcss",
 
       --Python
       "pyright",

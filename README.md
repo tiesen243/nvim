@@ -9,7 +9,7 @@
 3. **Copilot** for code suggestion
 4. **Treesitter** for syntax highlighting
 5. **Telescope** for fuzzy finding
-   and more...
+6. and more...
 
 ## Requirements
 

@@ -1,6 +1,7 @@
 local M = { "numToStr/Comment.nvim" }
 
 M.dependencies = {
+  "folke/todo-comments.nvim",
   "JoosepAlviste/nvim-ts-context-commentstring",
 }
 
@@ -12,6 +13,11 @@ M.config = function()
 
   local status_okk, ts_commentstring = pcall(require, "ts_context_commentstring.integrations.comment_nvim")
   if not status_okk then
+    return
+  end
+
+  local status_okkk, todo = pcall(require, "todo-comments")
+  if not status_okkk then
     return
   end
 
@@ -31,6 +37,8 @@ M.config = function()
     },
     pre_hook = ts_commentstring.create_pre_hook(),
   })
+
+  todo.setup()
 end
 
 return M

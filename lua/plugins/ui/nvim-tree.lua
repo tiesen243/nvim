@@ -1,5 +1,9 @@
 local M = { "nvim-tree/nvim-tree.lua" }
 
+M.dependencies = {
+  "nvim-tree/nvim-web-devicons",
+}
+
 M.config = function()
   local status_ok, nvim_tree = pcall(require, "nvim-tree")
   if not status_ok then

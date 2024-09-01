@@ -1,5 +1,10 @@
 local M = { "neovim/nvim-lspconfig" }
 
+M.dependencies = {
+  "hrsh7th/cmp-nvim-lsp",
+  "kmontocam/nvim-conda",
+}
+
 M.config = function()
   local status_ok, lspconfig = pcall(require, "lspconfig")
   if not status_ok then

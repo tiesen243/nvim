@@ -5,6 +5,7 @@ M.config = function()
   if not status_ok then
     return
   end
+
   autopairs.setup()
 end
 

@@ -3,8 +3,8 @@ local opt = vim.opt
 
 -- General
 opt.wrap = false
-opt.termguicolors = true
 opt.showmode = false
+opt.termguicolors = true
 
 -- Numbers
 opt.number = true
@@ -36,6 +36,7 @@ opt.autoread = true
 opt.autowrite = true
 opt.autochdir = true
 opt.autoindent = true
+opt.autowriteall = true
 
 -- Others
 opt.list = true
@@ -46,6 +47,7 @@ opt.pumheight = 10
 opt.swapfile = false
 opt.linebreak = true
 opt.conceallevel = 2
+opt.concealcursor = nil
 opt.fillchars.eob = " "
 opt.shortmess:append("c")
 opt.iskeyword:append("-")
@@ -54,5 +56,6 @@ opt.completeopt = { "menuone", "noselect" }
 
 -- Providers
 g.loaded_node_provider = 0
+g.loaded_python_provider = 0
 g.loaded_python_provider = 0
 g.loaded_python_provider = 0

@@ -12,9 +12,9 @@ M.config = function()
 end
 
 M.keys = {
-  { "<leader>g",  "<nop>",                       desc = "Git" },
-  { "<leader>gb", "<cmd>Gitsigns blame<cr>",     desc = "Blame" },
-  { "<leader>gl", "<cmd>Gitsigns blameline<cr>", desc = "Blame Line" },
+  { "<leader>g",  "<nop>",                        desc = "Git" },
+  { "<leader>gb", "<cmd>Gitsigns blame<cr>",      desc = "Blame" },
+  { "<leader>gl", "<cmd>Gitsigns blame_line<cr>", desc = "Blame Line" },
 }
 
 return M

@@ -70,6 +70,7 @@ M.config = function()
           }
           vim.lsp.buf.execute_command(params)
         end,
+        description = "Organize Imports",
       },
     },
   })

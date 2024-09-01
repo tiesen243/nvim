@@ -7,19 +7,9 @@
 1. **LSP** (Language Server Protocol) support
 2. **CMP** for autocompletion
 3. **Copilot** for code suggestion
-4. **Mason** for lsp management
-5. **TreeSitter** for syntax highlighting
-6. **Telescope** for fuzzy finding
-7. **Bufferline** for buffer management
-8. **Lualine** for status line
-9. **NvimTree** for file explorer
-10. **Auto-pairs** for auto closing brackets
-11. **Comment** for commenting code
-12. **Mini-Indent** for auto indent code
-13. **Gitsigns** for git status
-14. **Colorizer** for color highlighting
-15. **Alpha** for startup screen
-16. **Noice** for floating ui
+4. **Treesitter** for syntax highlighting
+5. **Telescope** for fuzzy finding
+   and more...
 
 ## Requirements
 

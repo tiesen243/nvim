@@ -28,10 +28,10 @@ M.config = function()
 
       --Web Development
       "html",
+      "ts_ls",
       "cssls",
       "eslint",
       "emmet_ls",
-      "tsserver",
       "prismals",
       "tailwindcss",
 

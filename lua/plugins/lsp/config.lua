@@ -48,7 +48,7 @@ M.config = function()
     end
   end
 
-  local servers = { "html", "emmet_ls", "tailwindcss", "eslint", "prismals", "pyright", "dockerls", "hyprls" }
+  local servers = { "html", "emmet_ls", "tailwindcss", "eslint", "prismals", "pyright", "dockerls" }
   for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup({
       on_attach = on_attach,
@@ -56,7 +56,7 @@ M.config = function()
     })
   end
 
-  lspconfig["tsserver"].setup({
+  lspconfig["ts_ls"].setup({
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = { "typescript-language-server", "--stdio" },

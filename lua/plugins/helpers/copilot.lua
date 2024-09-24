@@ -15,7 +15,6 @@ M.config = function()
   require("CopilotChat.integrations.cmp").setup()
 
   CopilotChat.setup({
-    debug = true,
     window = {
       layout = "float",
       title = "Copilot Chat",

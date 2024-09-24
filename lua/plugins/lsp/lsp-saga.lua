@@ -11,13 +11,13 @@ M.config = function()
       enabled = false,
     },
     finder = {
-      default = "def+ref+imp",
+      default = "ref",
       keys = {
         tabnew = "<cr>",
       },
     },
     rename = {
-      keys = { quit = "<esc>" },
+      keys = { quit = "<C-d>" },
     },
     code_action = {
       num_shortcut = true,
@@ -25,7 +25,7 @@ M.config = function()
       extend_gitsigns = true,
     },
     outline = {
-      close_after_jump = true,
+      close_after_jump = false,
       keys = {
         jump = "<cr>",
       },

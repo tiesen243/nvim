@@ -1,61 +1,63 @@
-local g = vim.g
-local opt = vim.opt
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
--- General
-opt.wrap = false
-opt.showmode = false
-opt.termguicolors = true
 
--- Numbers
-opt.number = true
-opt.relativenumber = false
+vim.opt.title = true
+vim.opt.shell = "zsh"
+vim.opt.number = true
 
--- Tab settings
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.smarttab = true
-opt.expandtab = true
-opt.shiftround = true
-opt.smartindent = true
+-- Indentation
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.breakindent = true
 
--- Search
-opt.smartcase = true
-opt.ignorecase = true
+-- Tabs
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.smarttab = true
+
+vim.opt.hlsearch = true
+vim.opt.backup = false
+vim.opt.showcmd = true
+vim.opt.cmdheight = 1
+vim.opt.laststatus = 3
+vim.opt.scrolloff = 10
+vim.opt.expandtab = true
+vim.opt.inccommand = "split"
+vim.opt.wrap = false -- No Wrap lines
+vim.opt.backspace = { "start", "eol", "indent" }
+vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
+vim.opt.ignorecase = true     -- Case insensitive searching UNLESS /C or capital in search
+vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
+vim.opt.wildignore:append({ "*/node_modules/*" })
+
+-- Window splits
+vim.opt.splitbelow = true -- Put new windows below current
+vim.opt.splitright = true -- Put new windows right of current
+vim.opt.splitkeep = "cursor"
+
+-- Mouse
+vim.opt.mouse = ""
 
 -- Clipboard
-opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- Cursor
-opt.cursorline = true
-opt.cursorcolumn = false
-opt.guicursor =
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
+vim.opt.guicursor =
 "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
--- Auto
-opt.autoread = true
-opt.autowrite = true
-opt.autochdir = true
-opt.autoindent = true
-opt.autowriteall = true
+-- Undercurl
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
--- Others
-opt.list = true
-opt.mouse = "a"
-opt.scrolloff = 8
-opt.pumblend = 10
-opt.pumheight = 10
-opt.swapfile = false
-opt.linebreak = true
-opt.conceallevel = 2
-opt.concealcursor = nil
-opt.fillchars.eob = " "
-opt.shortmess:append("c")
-opt.iskeyword:append("-")
-opt.whichwrap:append("<,>,[,],h,l")
-opt.completeopt = { "menuone", "noselect" }
+-- Add asterisks in block comments
+vim.opt.formatoptions:append({ "r" })
 
--- Providers
-g.loaded_node_provider = 0
-g.loaded_python_provider = 0
-g.loaded_python_provider = 0
-g.loaded_python_provider = 0
+vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+
+if vim.fn.has("nvim-0.8") == 1 then
+  vim.opt.cmdheight = 0
+end

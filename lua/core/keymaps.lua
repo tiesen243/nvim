@@ -1,15 +1,25 @@
 local map = vim.keymap.set
+
 local opts = function(desc)
   return { noremap = true, silent = true, expr = false, nowait = false, desc = desc }
 end
 
--- General
-map({ "n", "x" }, "9", "$", opts("End of line"))
-map("n", "x", '"_x', opts("Delete without yanking"))
+map({ "n", "x" }, "]", "$", opts("End of line"))
+map({ "n", "v" }, "[", "0", opts("Start of line"))
+
 map("n", "<C-a>", "<cmd>normal! ggVG<cr>", opts("Select all"))
+
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts("Quit search mode"))
+
 map("n", "<leader>q", "<cmd>wqa<cr>", opts("Save and close all buffers"))
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>write<cr><esc>", opts("Save current buffer"))
+
+-- Do things without affecting the registers
+map({ "v", "n" }, "p", '0p', opts("Paste without yanking"))
+map({ "v", "n" }, "P", '0P', opts("Paste without yanking"))
+map({ "v", "n" }, "x", '"_x', opts("Delete without yanking"))
+map({ "v", "n" }, "c", '"_c', opts("Change without yanking"))
+map({ "v", "n" }, "C", '"_C', opts("Change without yanking"))
 
 -- Undo & Redo
 map("n", "u", "<nop>", opts("Disable undo"))

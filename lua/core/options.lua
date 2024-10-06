@@ -36,6 +36,12 @@ vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 
+-- Auto
+vim.opt.autoread = true
+vim.opt.autowrite = true
+vim.opt.autochdir = true
+vim.opt.autowriteall = true
+
 -- Mouse
 vim.opt.mouse = ""
 
@@ -54,9 +60,6 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
-
-vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
-vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 
 if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0

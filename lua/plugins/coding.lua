@@ -168,17 +168,17 @@ return {
     lazy = false,
     dependencies = { "github/copilot.vim" },
     keys = {
-      { "<leader>gc",  "<nop>",                             desc = "Copilot" },
-      { "<leader>gct", "<cmd>CopilotChatToggle<cr>",        desc = "Toggle Copilot Chat" },
-      { "<leader>gce", "<cmd>CopilotChatExplain<cr>",       desc = "Explain code" },
-      { "<leader>gcr", "<cmd>CopilotChatReview<cr>",        desc = "Review code" },
-      { "<leader>gcf", "<cmd>CopilotChatFix<cr>",           desc = "Fix bug" },
-      { "<leader>gco", "<cmd>CopilotChatOptimize<cr>",      desc = "Optimize code" },
-      { "<leader>gcd", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "Fix Diagnostic" },
-      { "<leader>gcc", "<cmd>CopilotChatCommit<cr>",        desc = "Suggest commit message" },
-      { "<leader>gcs", "<cmd>CopilotChatCommitStaged<cr>",  desc = "Suggest commit stage message" },
+      { "<leader>c",  "<nop>",                             desc = "Copilot" },
+      { "<leader>ct", "<cmd>CopilotChatToggle<cr>",        desc = "Toggle Copilot Chat" },
+      { "<leader>ce", "<cmd>CopilotChatExplain<cr>",       desc = "Explain code" },
+      { "<leader>cr", "<cmd>CopilotChatReview<cr>",        desc = "Review code" },
+      { "<leader>cf", "<cmd>CopilotChatFix<cr>",           desc = "Fix bug" },
+      { "<leader>co", "<cmd>CopilotChatOptimize<cr>",      desc = "Optimize code" },
+      { "<leader>cd", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "Fix Diagnostic" },
+      { "<leader>cc", "<cmd>CopilotChatCommit<cr>",        desc = "Suggest commit message" },
+      { "<leader>cs", "<cmd>CopilotChatCommitStaged<cr>",  desc = "Suggest commit stage message" },
       {
-        "<leader>gcp",
+        "<leader>cp",
         function()
           local actions = require("CopilotChat.actions")
           require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())

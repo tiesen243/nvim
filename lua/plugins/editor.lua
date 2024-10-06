@@ -45,6 +45,15 @@ return {
   {
     "akinsho/bufferline.nvim",
     lazy = false,
+    keys = {
+      { "<Tab>",      "<cmd>BufferLineCycleNext<cr>",  desc = "Next tab" },
+      { "<S-Tab>",    "<cmd>BufferLineCyclePrev<cr>",  desc = "Prev tab" },
+      { "<leader>bp", "<cmd>BufferLinePick<cr>",       desc = "Pick tab" },
+      { "<leader>b",  "<nop>",                         desc = "Bufferline" },
+      { "<leader>bl", "<cmd>BufferLineCloseLeft<cr>",  desc = "Close Left" },
+      { "<leader>br", "<cmd>BufferLineCloseRight<cr>", desc = "Close Right" },
+      { "<leader>bc", "<cmd>BufferLinePickClose<cr>",  desc = "Pick & Close tab" },
+    },
     config = function()
       require("bufferline").setup({
         options = {

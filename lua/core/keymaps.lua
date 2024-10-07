@@ -16,10 +16,7 @@ map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>write<cr><esc>", opts("Save current b
 
 -- Do things without affecting the registers
 map({ "v", "n" }, "p", '0p', opts("Paste without yanking"))
-map({ "v", "n" }, "P", '0P', opts("Paste without yanking"))
 map({ "v", "n" }, "x", '"_x', opts("Delete without yanking"))
-map({ "v", "n" }, "c", '"_c', opts("Change without yanking"))
-map({ "v", "n" }, "C", '"_C', opts("Change without yanking"))
 
 -- Undo & Redo
 map("n", "u", "<nop>", opts("Disable undo"))
